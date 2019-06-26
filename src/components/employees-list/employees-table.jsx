@@ -22,9 +22,9 @@ class EmployeesTable extends Component {
       <Table.Row
         style={{ cursor: 'pointer' }}
         key={item._id}
-        disabled={item.status === 'INATIVO'}
+        warning={item.status === 'INATIVO'}
         negative={item.status === 'BLOQUEADO'}
-        onClick={() => this.props.history.push(`/employee/${item.cpf}`)}
+        onClick={() => this.props.history.push(`/employees/${item.cpf}`)}
       >
         <Table.Cell>{item.cpf}</Table.Cell>
         <Table.Cell>{item.nome}</Table.Cell>
@@ -92,7 +92,7 @@ class EmployeesTable extends Component {
                   icon
                   labelPosition="left"
                   primary
-                  onClick={() => this.props.history.push('/employee/new')}
+                  onClick={() => this.props.history.push('/employees/new')}
                 >
                   <Icon name="add" />
                   Novo funcionário

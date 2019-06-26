@@ -25,7 +25,6 @@ export default class EmployeesList extends Component {
   }
 
   updateFilter(newFilter) {
-    console.log(newFilter);
     let { filter } = this.state;
 
     filter = newFilter;
@@ -37,21 +36,25 @@ export default class EmployeesList extends Component {
   }
 
   async getEmployees() {
-    let { filter, employees, totalRows } = this.state;
+    try {
+      let { filter, employees, totalRows } = this.state;
 
-    const response = await axios.request({
-      method: 'GET',
-      baseURL: API_URL,
-      url: '/employee',
-      params: filter,
-    });
+      const response = await axios.request({
+        method: 'GET',
+        baseURL: API_URL,
+        url: '/employee',
+        params: filter,
+      });
 
-    const employeesData = response.data.content;
+      const employeesData = response.data.content;
 
-    employees = employeesData.list;
-    totalRows = employeesData.totalRows;
+      employees = employeesData.list;
+      totalRows = employeesData.totalRows;
 
-    this.setState({ employees, totalRows });
+      this.setState({ employees, totalRows });
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   render() {
