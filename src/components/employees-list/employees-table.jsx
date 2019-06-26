@@ -1,54 +1,100 @@
 import React, { Component } from 'react';
 import { Table, Menu, Pagination } from 'semantic-ui-react';
+import { withRouter } from 'react-router-dom';
 
-export default class EmployeesTable extends Component {
+class EmployeesTable extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      activePage: 1,
-    };
   }
 
-  handlePaginationChange = (e, { activePage }) => this.setState({ activePage });
+  getTableRows() {
+    const { employeesList } = this.props;
+
+    if (!employeesList.length) {
+      return (
+        <Table.Row>
+          <Table.Cell colSpan="7">Nenhum funcionário encontrado...</Table.Cell>
+        </Table.Row>
+      );
+    }
+
+    const list = employeesList.map(item => (
+      <Table.Row
+        style={{ cursor: 'pointer' }}
+        key={item._id}
+        disabled={item.status === 'INATIVO'}
+        negative={item.status === 'BLOQUEADO'}
+        onClick={() => this.props.history.push(`/employee/${item.cpf}`)}
+      >
+        <Table.Cell>{item.cpf}</Table.Cell>
+        <Table.Cell>{item.nome}</Table.Cell>
+        <Table.Cell>{item.ufNasc}</Table.Cell>
+        <Table.Cell>{item.cargo}</Table.Cell>
+        <Table.Cell>R$ {item.salario}</Table.Cell>
+        <Table.Cell>{this.formatDate(item.dataCad)}</Table.Cell>
+        <Table.Cell>{item.status}</Table.Cell>
+      </Table.Row>
+    ));
+
+    return list;
+  }
+
+  formatDate(date) {
+    const dateObject = new Date(date);
+    return dateObject.toLocaleDateString();
+  }
+
+  calculateTotalPages() {
+    const { totalRows } = this.props;
+
+    let totalPages;
+    if (Math.ceil(totalRows / 10) < 1) {
+      totalPages = 1;
+    } else {
+      totalPages = Math.ceil(totalRows / 10);
+    }
+
+    return totalPages;
+  }
+
+  handlePaginationChange = (e, { activePage }) => {
+    const { filter } = this.props;
+
+    filter.page = activePage;
+    this.props.updateFilter(filter);
+  };
 
   render() {
-    const { activePage } = this.state;
+    const { filter } = this.props;
+
     return (
       <>
-        <Table celled>
+        <Table celled style={{ marginBottom: '16px' }}>
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell>CPF</Table.HeaderCell>
               <Table.HeaderCell>Nome</Table.HeaderCell>
               <Table.HeaderCell>UF</Table.HeaderCell>
+              <Table.HeaderCell>Cargo</Table.HeaderCell>
               <Table.HeaderCell>Salário</Table.HeaderCell>
               <Table.HeaderCell>Data cadastro</Table.HeaderCell>
               <Table.HeaderCell>Status</Table.HeaderCell>
             </Table.Row>
           </Table.Header>
 
-          <Table.Body>
-            <Table.Row>
-              <Table.Cell>123.456.789-09</Table.Cell>
-              <Table.Cell>Funcionário Teste</Table.Cell>
-              <Table.Cell>SP</Table.Cell>
-              <Table.Cell>R$ 8500,00</Table.Cell>
-              <Table.Cell>26/06/2019</Table.Cell>
-              <Table.Cell>ATIVO</Table.Cell>
-            </Table.Row>
-          </Table.Body>
+          <Table.Body>{this.getTableRows()}</Table.Body>
 
           <Table.Footer>
             <Table.Row>
-              <Table.HeaderCell colSpan="6">
+              <Table.HeaderCell colSpan="7">
                 <Menu floated="right" pagination>
                   <Pagination
                     size="mini"
                     boundaryRange={0}
-                    activePage={activePage}
+                    activePage={filter.page}
                     ellipsisItem={undefined}
                     siblingRange={1}
-                    totalPages={10}
+                    totalPages={this.calculateTotalPages()}
                     onPageChange={this.handlePaginationChange}
                   />
                 </Menu>
@@ -60,3 +106,5 @@ export default class EmployeesTable extends Component {
     );
   }
 }
+
+export default withRouter(EmployeesTable);

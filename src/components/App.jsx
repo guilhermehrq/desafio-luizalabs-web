@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { Menu } from 'semantic-ui-react';
 import Routes from './Routes';
 
-export default class App extends Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,7 +11,10 @@ export default class App extends Component {
     };
   }
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+  handleItemClick = (name, route) => {
+    this.setState({ activeItem: name });
+    this.props.history.push(route);
+  };
 
   render() {
     const { activeItem } = this.state;
@@ -19,27 +22,25 @@ export default class App extends Component {
       <>
         <Menu>
           <Menu.Item header>Luizalabs Challenge</Menu.Item>
-          <Link to="/">
-            <Menu.Item
-              name="employees"
-              active={activeItem === 'employees'}
-              onClick={this.handleItemClick}
-            >
-              Funcionários
-            </Menu.Item>
-          </Link>
-          <Link to="/employees-states">
-            <Menu.Item
-              name="employees-states"
-              active={activeItem === 'employees-states'}
-              onClick={this.handleItemClick}
-            >
-              Estados por Funcionários
-            </Menu.Item>
-          </Link>
+          <Menu.Item
+            name="employees"
+            active={activeItem === 'employees'}
+            onClick={() => this.handleItemClick('employees', '/')}
+          >
+            Funcionários
+          </Menu.Item>
+          <Menu.Item
+            name="employees-states"
+            active={activeItem === 'employees-states'}
+            onClick={() => this.handleItemClick('employees-states', '/employees-states')}
+          >
+            Estados por Funcionários
+          </Menu.Item>
         </Menu>
         <Routes />
       </>
     );
   }
 }
+
+export default withRouter(App);
