@@ -25,7 +25,7 @@ export default class App extends Component {
               active={activeItem === 'employees'}
               onClick={this.handleItemClick}
             >
-              Employees
+              Funcionários
             </Menu.Item>
           </Link>
           <Link to="/employees-states">
@@ -34,7 +34,7 @@ export default class App extends Component {
               active={activeItem === 'employees-states'}
               onClick={this.handleItemClick}
             >
-              Employees States
+              Estados por Funcionários
             </Menu.Item>
           </Link>
         </Menu>
