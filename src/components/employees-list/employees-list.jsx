@@ -24,17 +24,6 @@ export default class EmployeesList extends Component {
     this.getEmployees();
   }
 
-  updateFilter(newFilter) {
-    let { filter } = this.state;
-
-    filter = newFilter;
-
-    this.setState({ filter });
-    setTimeout(() => {
-      this.getEmployees();
-    });
-  }
-
   async getEmployees() {
     try {
       let { filter, employees, totalRows } = this.state;
@@ -55,6 +44,17 @@ export default class EmployeesList extends Component {
     } catch (e) {
       console.log(e);
     }
+  }
+
+  updateFilter(newFilter) {
+    let { filter } = this.state;
+
+    filter = newFilter;
+
+    this.setState({ filter });
+    setTimeout(() => {
+      this.getEmployees();
+    });
   }
 
   render() {

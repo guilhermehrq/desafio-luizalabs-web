@@ -7,7 +7,7 @@ class EmployeesTable extends Component {
     super(props);
   }
 
-  getTableRows() {
+  generateTableRows() {
     const { employeesList } = this.props;
 
     if (!employeesList.length) {
@@ -83,7 +83,7 @@ class EmployeesTable extends Component {
             </Table.Row>
           </Table.Header>
 
-          <Table.Body>{this.getTableRows()}</Table.Body>
+          <Table.Body>{this.generateTableRows()}</Table.Body>
 
           <Table.Footer>
             <Table.Row>
