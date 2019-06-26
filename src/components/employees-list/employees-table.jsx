@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table, Menu, Pagination } from 'semantic-ui-react';
+import { Table, Menu, Pagination, Button, Icon } from 'semantic-ui-react';
 import { withRouter } from 'react-router-dom';
 
 class EmployeesTable extends Component {
@@ -40,7 +40,8 @@ class EmployeesTable extends Component {
   }
 
   formatDate(date) {
-    const dateObject = new Date(date);
+    const formattedDate = `${date.split('T')[0]}T03:00:00`;
+    const dateObject = new Date(formattedDate);
     return dateObject.toLocaleDateString();
   }
 
@@ -87,6 +88,15 @@ class EmployeesTable extends Component {
           <Table.Footer>
             <Table.Row>
               <Table.HeaderCell colSpan="7">
+                <Button
+                  icon
+                  labelPosition="left"
+                  primary
+                  onClick={() => this.props.history.push('/employee/new')}
+                >
+                  <Icon name="add" />
+                  Novo funcionário
+                </Button>
                 <Menu floated="right" pagination>
                   <Pagination
                     size="mini"

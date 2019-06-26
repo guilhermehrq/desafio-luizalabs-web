@@ -31,7 +31,9 @@ export default class EmployeesList extends Component {
     filter = newFilter;
 
     this.setState({ filter });
-    this.getEmployees();
+    setTimeout(() => {
+      this.getEmployees();
+    });
   }
 
   async getEmployees() {
@@ -60,7 +62,7 @@ export default class EmployeesList extends Component {
         <Container>
           <Segment>
             <Header as="h3">Filtro de funcionários</Header>
-            <EmployeesFilter />
+            <EmployeesFilter updateFilter={this.updateFilter} />
           </Segment>
 
           <EmployeesTable
