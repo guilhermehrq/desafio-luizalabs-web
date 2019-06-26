@@ -20,8 +20,17 @@ class App extends Component {
     const { activeItem } = this.state;
     return (
       <>
-        <Menu>
-          <Menu.Item header>Luizalabs Challenge</Menu.Item>
+        <div
+          id="magalu-bar"
+          style={{
+            width: '100%',
+            height: '5px',
+            background:
+              'linear-gradient(to right,#fcd000 0,#ff8a00 17%,#ff253a 34%,#ff37a8 51%,#a400e1 67%,#0086ff 83%,#00d604 100%)',
+          }}
+        />
+        <Menu style={{ marginTop: 0 }}>
+          <Menu.Item header>Desafio Luizalabs</Menu.Item>
           <Menu.Item
             name="employees"
             active={activeItem === 'employees'}
