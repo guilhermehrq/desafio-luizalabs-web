@@ -34,7 +34,7 @@ class App extends Component {
           <Menu.Item
             name="employees"
             active={activeItem === 'employees'}
-            onClick={() => this.handleItemClick('employees', '/')}
+            onClick={() => this.handleItemClick('employees', '/funcionarios')}
           >
             Funcionários
           </Menu.Item>

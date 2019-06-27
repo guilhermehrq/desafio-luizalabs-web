@@ -111,7 +111,7 @@ export default class EmployeesFilter extends Component {
               <MaskedInput
                 mask={cpfMask}
                 guide={false}
-                placeholder="434.123.123-12"
+                placeholder="123.456.789-09"
                 name="cpf"
                 value={filter.cpf}
                 onChange={this.handleChangeMaskedField}

@@ -190,7 +190,7 @@ class EmployeesInfo extends Component {
                   <MaskedInput
                     mask={cpfMask}
                     guide={false}
-                    placeholder="434.123.123-12"
+                    placeholder="123.456.789-09"
                     name="cpf"
                     value={employee.cpf}
                     onChange={this.handleChangeMaskedField}

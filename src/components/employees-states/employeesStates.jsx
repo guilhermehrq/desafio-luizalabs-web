@@ -42,7 +42,7 @@ class EmployeesStates extends Component {
     if (!employeesStates.length) {
       return (
         <Table.Row>
-          <Table.Cell colSpan="2">Nenhuma UF encontrada...</Table.Cell>
+          <Table.Cell colSpan="2">Nenhum funcionário encontrado...</Table.Cell>
         </Table.Row>
       );
     }
@@ -66,7 +66,7 @@ class EmployeesStates extends Component {
       <>
         <Container style={{ marginBottom: '16px' }}>
           <Segment>
-          <Header as="h4">Lista de UFs e a quantidade de funcionários em cada um</Header>
+          <Header as="h4">Lista de UFs e a quantidade de funcionários nascidos em cada uma</Header>
           <Table celled collapsing style={{ margin: '0 auto' }}>
             <Table.Header>
               <Table.Row>
