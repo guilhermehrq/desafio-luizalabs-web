@@ -7,11 +7,11 @@ import EmployeesStates from './employees-states/employeesStates';
 
 const Routes = () => (
   <Switch>
-    <Route path="/" exact render={() => <Redirect to={{ pathname: '/employees' }} />} />
-    <Route path="/employees" exact component={EmployeesList} />
-    <Route path="/employees/new" component={EmployeesInfo} />
-    <Route path="/employees/:employeeId" component={EmployeesInfo} />
-    <Route path="/employees-states" component={EmployeesStates} />
+    <Route path="/" exact render={() => <Redirect to={{ pathname: '/funcionarios' }} />} />
+    <Route path="/funcionarios" exact component={EmployeesList} />
+    <Route path="/funcionarios/novo" component={EmployeesInfo} />
+    <Route path="/funcionarios/:employeeId" component={EmployeesInfo} />
+    <Route path="/analise-estados" component={EmployeesStates} />
   </Switch>
 );
 

@@ -25,7 +25,7 @@ class EmployeesTable extends Component {
         key={item._id}
         warning={item.status === 'INATIVO'}
         negative={item.status === 'BLOQUEADO'}
-        onClick={() => this.props.history.push(`/employees/${item.cpf}`)}
+        onClick={() => this.props.history.push(`/funcionarios/${item.cpf}`)}
       >
         <Table.Cell>{PipeCpf(item.cpf)}</Table.Cell>
         <Table.Cell>{item.nome}</Table.Cell>
@@ -86,7 +86,7 @@ class EmployeesTable extends Component {
                 icon
                 labelPosition="left"
                 primary
-                onClick={() => this.props.history.push('/employees/new')}
+                onClick={() => this.props.history.push('/funcionarios/novo')}
               >
                 <Icon name="add" />
                 Novo funcionário

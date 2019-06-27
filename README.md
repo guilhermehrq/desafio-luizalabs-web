@@ -1,68 +1,89 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Desafio Técnico Luizalabs - Web
 
-## Available Scripts
+![Build status](https://travis-ci.com/guilhermehrq/desafio-luizalabs-web.svg?token=NMRqR1XzXHw8yVERNabp&branch=master)
 
-In the project directory, you can run:
+Frontend desenvolvido para consumo dos serviços disponibilizados pela [API de Desafio Técnico](https://github.com/guilhermehrq/desafio-luizalabs) do [Luizalabs](https://www.99jobs.com/luizalabs).
 
-### `npm start`
+- Desenvolvido com [ReactJS](https://pt-br.reactjs.org/)
+- Interface criada com [Semantic UI](https://react.semantic-ui.com/)
+- Testes automatizados com [Jest](https://jestjs.io/) e [Enzyme](https://airbnb.io/enzyme/)
+- Integração continua com [TravisCI](https://travis-ci.com/)
+- Deploy automático com [Heroku](https://www.heroku.com/)
+- Padronização do projeto seguindo especificações da [Airbnb](https://github.com/airbnb/javascript) configuradas com o uso do [ESLint](https://eslint.org/)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Índice
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+- [A aplicação](#id1)
+- [Demo](#id2)
+- [Executando a aplicação](#id3)
+  - [Configurando váriaveis de ambiente](#id4)
+  - [Iniciando a aplicação](#id5)
+- [Testes automatizados](#id6)
 
-### `npm test`
+<div id='id1' />
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## A aplicação
 
-### `npm run build`
+Esta aplicação web foi desenvolvida como desafio técnico para a vaga de desenvolvedor do Luizalabs, com o objetivo de consumir os serviços disponibilizados pela API criada para o mesmo desafio.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> Mais infomações sobre a API podem ser encontradas em seu [repositório](https://github.com/guilhermehrq/desafio-luizalabs).
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+A aplicação foi inteiramente desenvolvida com a biblioteca JavaScript **ReactJS** com elementos da framework de interface de usuário **Semantic UI**.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Com uma interface simples e amigável disponibiliza os serviços de Busca, Inserção, Atualização e Exclusão de funcionários, além de possuir uma tabela para analise da quantidade de funcionários nascidos em cada estado brasileiro. Todos estes serviços consumidos da API criada para o desafio.
 
-### `npm run eject`
+<div id='id2' />
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Demo
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Uma versão em funcionamento da aplicação está disponível para demonstração e pode ser acessada através do endereço:
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[Desafio Luizalabs (Web)](http://desafio-luizalabs.herokuapp.com/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<div id='id3' />
 
-## Learn More
+## Executando a aplicação
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para executar a aplicação certifique-se de ter instalado em sua máquina o [NodeJS](https://nodejs.org/en/download/) juntamente com o [Git](https://git-scm.com/downloads).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Execute os seguintes comandos no terminal de sua máquina:
 
-### Code Splitting
+```sh
+$ git clone https://github.com/guilhermehrq/desafio-luizalabs-web.git
+$ cd desafio-luizalabs-web
+$ npm install
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+<div id='id4' />
 
-### Analyzing the Bundle Size
+**Configurando variáveis de ambiente**
+Em seguida, abra o arquivo _.env_ e configure a variável de ambiente com a rota base para requisições na API:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+```js
+REACT_APP_API_URL=http://localhost:3001
+// Também pode ser configurado com a rota: https://desafio-luizalabs-api.herokuapp.com
+```
 
-### Making a Progressive Web App
+> Certifique-se de ter iniciado a API, o guia para utilização pode ser encontrado aqui: [Desafio Luizalabs - API](https://github.com/guilhermehrq/desafio-luizalabs)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+<div id='id5' />
 
-### Advanced Configuration
+**Iniciando a aplicação**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Após realizados os passos acima, basta ir até o terminal e executar o seguinte comando:
 
-### Deployment
+```sh
+$ npm start
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+E pronto! Seu navegador padrão será aberto com a aplicação em funcionamento.
 
-### `npm run build` fails to minify
+<div id='id6' />
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Testes automatizados
+
+Para execução dos testes automatizados com Jest e Enzyme, basta executar o comando:
+
+```sh
+$ npm test
+```

@@ -132,7 +132,7 @@ class EmployeesInfo extends Component {
         toast.success('Funcionário alterado com sucesso!');
       }
 
-      this.props.history.push('/employees');
+      this.props.history.push('/funcionarios');
     } catch (e) {
       toast.error(`Erro ao inserir/alterar funcionário. ${e}`);
     }
@@ -152,7 +152,7 @@ class EmployeesInfo extends Component {
 
       toast.success('Funcionário excluído com sucesso!');
 
-      this.props.history.push('/employees');
+      this.props.history.push('/funcionarios');
     } catch (e) {
       toast.error(`Erro ao buscar funcionário. ${e}`);
     }
