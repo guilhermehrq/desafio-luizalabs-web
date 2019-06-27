@@ -40,6 +40,7 @@ class EmployeesInfo extends Component {
 
   componentWillMount() {
     const { employeeId } = this.props.match.params;
+
     if (employeeId) {
       this.handleGetEmloyee(employeeId);
     }
@@ -55,6 +56,7 @@ class EmployeesInfo extends Component {
 
   handleChangeMaskedField = e => {
     const { employee } = this.state;
+
     employee[e.target.name] = e.target.value;
     this.cleanInvalidInputs(e.target.name);
     this.setState({ employee });
@@ -62,6 +64,7 @@ class EmployeesInfo extends Component {
 
   cleanInvalidInputs(name) {
     const { propertiesWithError } = this.state;
+
     propertiesWithError[name] = false;
     this.setState({ propertiesWithError });
   }

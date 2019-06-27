@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing EmployeesStates Component should render menu correctly 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <withRouter(EmployeesStates)>
+      <EmployeesStates
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "createHref": [Function],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+        location={
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          }
+        }
+        match={
+          Object {
+            "isExact": true,
+            "params": Object {},
+            "path": "/",
+            "url": "/",
+          }
+        }
+      >
+        <Container
+          style={
+            Object {
+              "marginBottom": "16px",
+            }
+          }
+        >
+          <div
+            className="ui container"
+            style={
+              Object {
+                "marginBottom": "16px",
+              }
+            }
+          >
+            <Segment>
+              <div
+                className="ui segment"
+              >
+                <Header
+                  as="h4"
+                >
+                  <h4
+                    className="ui header"
+                  >
+                    Lista de UFs e a quantidade de funcionários em cada um
+                  </h4>
+                </Header>
+                <Table
+                  as="table"
+                  celled={true}
+                  collapsing={true}
+                  style={
+                    Object {
+                      "margin": "0 auto",
+                    }
+                  }
+                >
+                  <table
+                    className="ui celled collapsing table"
+                    style={
+                      Object {
+                        "margin": "0 auto",
+                      }
+                    }
+                  >
+                    <TableHeader
+                      as="thead"
+                    >
+                      <thead
+                        className=""
+                      >
+                        <TableRow
+                          as="tr"
+                          cellAs="td"
+                        >
+                          <tr
+                            className=""
+                          >
+                            <TableHeaderCell
+                              as="th"
+                            >
+                              <TableCell
+                                as="th"
+                                className=""
+                              >
+                                <th
+                                  className=""
+                                >
+                                  UF
+                                </th>
+                              </TableCell>
+                            </TableHeaderCell>
+                            <TableHeaderCell
+                              as="th"
+                            >
+                              <TableCell
+                                as="th"
+                                className=""
+                              >
+                                <th
+                                  className=""
+                                >
+                                  Quantidade de funcionários
+                                </th>
+                              </TableCell>
+                            </TableHeaderCell>
+                          </tr>
+                        </TableRow>
+                      </thead>
+                    </TableHeader>
+                    <TableBody
+                      as="tbody"
+                    >
+                      <tbody
+                        className=""
+                      >
+                        <TableRow
+                          as="tr"
+                          cellAs="td"
+                        >
+                          <tr
+                            className=""
+                          >
+                            <TableCell
+                              as="td"
+                              colSpan="2"
+                            >
+                              <td
+                                className=""
+                                colSpan="2"
+                              >
+                                Nenhuma UF encontrada...
+                              </td>
+                            </TableCell>
+                          </tr>
+                        </TableRow>
+                      </tbody>
+                    </TableBody>
+                  </table>
+                </Table>
+              </div>
+            </Segment>
+          </div>
+        </Container>
+      </EmployeesStates>
+    </withRouter(EmployeesStates)>
+  </Router>
+</BrowserRouter>
+`;

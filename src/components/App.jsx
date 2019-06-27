@@ -43,7 +43,7 @@ class App extends Component {
             active={activeItem === 'employees-states'}
             onClick={() => this.handleItemClick('employees-states', '/employees-states')}
           >
-            Analise por estado
+            Analise por estados
           </Menu.Item>
         </Menu>
         <Routes />
