@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Button, Form, Container, Header, Segment, Icon, Confirm } from 'semantic-ui-react';
 import { withRouter } from 'react-router-dom';
 import { ufList } from './employeeInfoUtils';
+import MaskedInput from 'react-text-mask';
+import { moneyMask, PipeCpf, PipeMoney } from '../../utils/maskAndPipes';
 
 import { API_URL } from '../../utils/constants';
 
@@ -41,6 +43,12 @@ class EmployeesInfo extends Component {
     this.setState({ employee });
   };
 
+  handleChangeMaskedField = e => {
+    const { employee } = this.state;
+    employee[e.target.name] = e.target.value;
+    this.setState({ employee });
+  };
+
   handleSelectChange = (e, { value, name }) => {
     const { employee } = this.state;
 
@@ -58,6 +66,9 @@ class EmployeesInfo extends Component {
 
       const employee = response.data.content;
 
+      employee.cpf = PipeCpf(employee.cpf);
+      employee.salario = PipeMoney(employee.salario);
+
       this.setState({ employee });
     } catch (e) {
       console.log(e);
@@ -67,7 +78,10 @@ class EmployeesInfo extends Component {
   handleSubmit = async () => {
     try {
       const { employeeId } = this.props.match.params;
-      const { employee } = this.state;
+      const { employee } = JSON.parse(JSON.stringify(this.state));
+
+      employee.cpf = employee.cpf.replace(/\D+/g, '');
+      employee.salario = parseFloat(employee.salario.replace(',', '.').replace('R$ ', ''));
 
       if (!employeeId) {
         await axios.request({
@@ -127,12 +141,12 @@ class EmployeesInfo extends Component {
                 <Form.Input
                   fluid
                   label="Nome"
-                  placeholder="Nome do funcionário"
+                  placeholder="Fulano de Tal"
                   name="nome"
                   value={employee.nome}
                   onChange={this.handleInputChange}
                 />
-                <Form.Input
+                {/* <Form.Input
                   fluid
                   label="CPF"
                   placeholder="CPF do funcionário"
@@ -141,7 +155,34 @@ class EmployeesInfo extends Component {
                   value={employee.cpf}
                   onChange={this.handleInputChange}
                   readOnly={employeeId}
-                />
+                /> */}
+                <Form.Field>
+                  <label>CPF</label>
+                  <MaskedInput
+                    mask={[
+                      /\d/,
+                      /\d/,
+                      /\d/,
+                      '.',
+                      /\d/,
+                      /\d/,
+                      /\d/,
+                      '.',
+                      /\d/,
+                      /\d/,
+                      /\d/,
+                      '-',
+                      /\d/,
+                      /\d/,
+                    ]}
+                    guide={false}
+                    placeholder="434.123.123-12"
+                    name="cpf"
+                    value={employee.cpf}
+                    onChange={this.handleChangeMaskedField}
+                    readOnly={employeeId}
+                  />
+                </Form.Field>
               </Form.Group>
 
               <Form.Group widths="equal">
@@ -156,7 +197,7 @@ class EmployeesInfo extends Component {
                 <Form.Input
                   fluid
                   label="Cargo"
-                  placeholder="Cargo do funcionário"
+                  placeholder="Dev Pl"
                   name="cargo"
                   value={employee.cargo}
                   onChange={this.handleInputChange}
@@ -172,14 +213,17 @@ class EmployeesInfo extends Component {
                   value={employee.status}
                   onChange={this.handleSelectChange}
                 />
-                <Form.Input
-                  fluid
-                  label="Salário"
-                  placeholder="Salário do funcionário"
-                  name="salario"
-                  value={employee.salario}
-                  onChange={this.handleInputChange}
-                />
+                <Form.Field>
+                  <label>Salário</label>
+                  <MaskedInput
+                    mask={moneyMask}
+                    guide={false}
+                    placeholder="1000,00"
+                    name="salario"
+                    value={employee.salario}
+                    onChange={this.handleChangeMaskedField}
+                  />
+                </Form.Field>
               </Form.Group>
 
               <Button icon labelPosition="left" positive type="submit">

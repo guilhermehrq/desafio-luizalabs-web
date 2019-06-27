@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table, Menu, Pagination, Button, Icon } from 'semantic-ui-react';
+import { PipeCpf, PipeDate, PipeMoney } from '../../utils/maskAndPipes';
 import { withRouter } from 'react-router-dom';
 
 class EmployeesTable extends Component {
@@ -26,23 +27,17 @@ class EmployeesTable extends Component {
         negative={item.status === 'BLOQUEADO'}
         onClick={() => this.props.history.push(`/employees/${item.cpf}`)}
       >
-        <Table.Cell>{item.cpf}</Table.Cell>
+        <Table.Cell>{PipeCpf(item.cpf)}</Table.Cell>
         <Table.Cell>{item.nome}</Table.Cell>
         <Table.Cell>{item.ufNasc}</Table.Cell>
         <Table.Cell>{item.cargo}</Table.Cell>
-        <Table.Cell>R$ {item.salario}</Table.Cell>
-        <Table.Cell>{this.formatDate(item.dataCad)}</Table.Cell>
+        <Table.Cell>{PipeMoney(item.salario)}</Table.Cell>
+        <Table.Cell>{PipeDate(item.dataCad)}</Table.Cell>
         <Table.Cell>{item.status}</Table.Cell>
       </Table.Row>
     ));
 
     return list;
-  }
-
-  formatDate(date) {
-    const formattedDate = `${date.split('T')[0]}T03:00:00`;
-    const dateObject = new Date(formattedDate);
-    return dateObject.toLocaleDateString();
   }
 
   calculateTotalPages() {

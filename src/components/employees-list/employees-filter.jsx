@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Form, Message, Icon } from 'semantic-ui-react';
+import MaskedInput from 'react-text-mask';
+import { moneyMask } from '../../utils/maskAndPipes';
 
 export default class EmployeesFilter extends Component {
   constructor(props) {
@@ -30,6 +32,12 @@ export default class EmployeesFilter extends Component {
     this.setState({ ...filter });
   };
 
+  handleChangeMaskedField = e => {
+    const { filter } = this.state;
+    filter[e.target.name] = e.target.value;
+    this.setState({ ...filter });
+  };
+
   handleSelectChange = (e, { value }) => {
     const { filter } = this.state;
 
@@ -57,7 +65,7 @@ export default class EmployeesFilter extends Component {
   handleSubmit() {
     const { filter } = JSON.parse(JSON.stringify(this.state));
 
-    filter.dataCad = this.formatDate(filter.dataCad);
+    this.prepareData(filter);
 
     const newFilter = { ...filter, page: 1 };
 
@@ -73,6 +81,22 @@ export default class EmployeesFilter extends Component {
     }
   }
 
+  prepareData(filter) {
+    filter.dataCad = this.formatDate(filter.dataCad);
+
+    filter.cpf = filter.cpf.replace(/\D+/g, '');
+
+    filter.salarioMin = filter.salarioMin
+      ? parseFloat(filter.salarioMin.replace(',', '.').replace('R$ ', ''))
+      : '';
+
+    filter.salarioMax = filter.salarioMax
+      ? parseFloat(filter.salarioMax.replace(',', '.').replace('R$ ', ''))
+      : '';
+
+    return filter;
+  }
+
   render() {
     const { statusList, filter } = this.state;
 
@@ -82,35 +106,55 @@ export default class EmployeesFilter extends Component {
           <Form.Input
             fluid
             label="Nome"
-            placeholder="Nome do funcionário"
+            placeholder="Fulano de Tal"
             name="nome"
             value={filter.nome}
             onChange={this.handleInputChange}
           />
           <Form.Group widths="equal">
-            <Form.Input
-              fluid
-              label="CPF"
-              placeholder="CPF do funcionário"
-              name="cpf"
-              maxLength="11"
-              value={filter.cpf}
-              onChange={this.handleInputChange}
-            />
-            <Form.Input
-              fluid
-              label="Data de Cadastro"
-              placeholder="DD/MM/YYYY"
-              name="dataCad"
-              value={filter.dataCad}
-              onChange={this.handleInputChange}
-            />
+            <Form.Field>
+              <label>CPF</label>
+              <MaskedInput
+                mask={[
+                  /\d/,
+                  /\d/,
+                  /\d/,
+                  '.',
+                  /\d/,
+                  /\d/,
+                  /\d/,
+                  '.',
+                  /\d/,
+                  /\d/,
+                  /\d/,
+                  '-',
+                  /\d/,
+                  /\d/,
+                ]}
+                guide={false}
+                placeholder="434.123.123-12"
+                name="cpf"
+                value={filter.cpf}
+                onChange={this.handleChangeMaskedField}
+              />
+            </Form.Field>
+            <Form.Field>
+              <label>Data de Cadastro</label>
+              <MaskedInput
+                mask={[/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]}
+                guide={false}
+                placeholder="26/06/2019"
+                name="dataCad"
+                value={filter.dataCad}
+                onChange={this.handleChangeMaskedField}
+              />
+            </Form.Field>
           </Form.Group>
           <Form.Group widths="equal">
             <Form.Input
               fluid
               label="Cargo"
-              placeholder="Cargo do funcionário"
+              placeholder="Dev Pl"
               name="cargo"
               value={filter.cargo}
               onChange={this.handleInputChange}
@@ -125,22 +169,28 @@ export default class EmployeesFilter extends Component {
             />
           </Form.Group>
           <Form.Group widths="equal">
-            <Form.Input
-              fluid
-              label="Salário Mínimo"
-              placeholder="Salário mínimo a ser buscado"
-              name="salarioMin"
-              value={filter.salarioMin}
-              onChange={this.handleInputChange}
-            />
-            <Form.Input
-              fluid
-              label="Salário Máximo"
-              placeholder="Salário máximo a ser buscado"
-              name="salarioMax"
-              value={filter.salarioMax}
-              onChange={this.handleInputChange}
-            />
+            <Form.Field>
+              <label>Salário Mínimo</label>
+              <MaskedInput
+                mask={moneyMask}
+                guide={false}
+                placeholder="10,00"
+                name="salarioMin"
+                value={filter.salarioMin}
+                onChange={this.handleChangeMaskedField}
+              />
+            </Form.Field>
+            <Form.Field>
+              <label>Salário Máximo</label>
+              <MaskedInput
+                mask={moneyMask}
+                guide={false}
+                placeholder="1000,00"
+                name="salarioMax"
+                value={filter.salarioMax}
+                onChange={this.handleChangeMaskedField}
+              />
+            </Form.Field>
           </Form.Group>
           <Button icon labelPosition="left" primary type="submit">
             <Icon name="search" />
