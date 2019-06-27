@@ -10,6 +10,7 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "react-text-mask": "^5.4.3",
+    "react-toastify": "^5.3.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.87.2",
     "text-mask-addons": "^3.8.0"

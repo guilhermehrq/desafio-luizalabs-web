@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Container, Header, Segment } from 'semantic-ui-react';
 import EmployeesFilter from './employeesFilter';
 import EmployeesTable from './employeesTable';
+import { toast } from 'react-toastify';
 
 import { API_URL } from '../../utils/constants';
 
@@ -42,7 +43,7 @@ export default class EmployeesList extends Component {
 
       this.setState({ employees, totalRows });
     } catch (e) {
-      console.log(e);
+      toast.error('Erro ao buscar funcinários\n' + e);
     }
   }
 

@@ -15,6 +15,7 @@ import { withRouter } from 'react-router-dom';
 import { ufList } from './employeeInfo.utils';
 import { moneyMask, PipeCpf, PipeMoney } from '../../utils/maskAndPipes';
 import { validate } from './employeeInfoValidation';
+import { toast } from 'react-toastify';
 
 import { API_URL } from '../../utils/constants';
 
@@ -92,7 +93,7 @@ class EmployeesInfo extends Component {
 
       this.setState({ employee });
     } catch (e) {
-      console.log(e);
+      toast.error('Erro ao buscar funcionário\n' + e);
     }
   }
 
@@ -127,6 +128,8 @@ class EmployeesInfo extends Component {
           url: '/employee',
           data: employee,
         });
+
+        toast.success('Funcionário inserido com sucesso!');
       } else {
         await axios.request({
           method: 'PUT',
@@ -134,11 +137,13 @@ class EmployeesInfo extends Component {
           url: `/employee/${employee.cpf}`,
           data: employee,
         });
+
+        toast.success('Funcionário alterado com sucesso!');
       }
 
       this.props.history.push('/employees');
     } catch (e) {
-      console.log(e);
+      toast.error('Erro ao inserir/alterar funcionário\n' + e);
     }
   };
 
@@ -154,9 +159,11 @@ class EmployeesInfo extends Component {
         url: `/employee/${employee.cpf}`,
       });
 
+      toast.success('Funcionário excluído com sucesso!');
+
       this.props.history.push('/employees');
     } catch (e) {
-      console.log(e);
+      toast.error('Erro ao buscar funcionário\n' + e);
     }
   };
 

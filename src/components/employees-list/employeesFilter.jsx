@@ -71,7 +71,7 @@ export default class EmployeesFilter extends Component {
     let { filter } = this.state;
 
     filter = INITIAL_FILTER;
-    this.setState({ filter });
+    this.setState({ filter, errorMessages: [], propertiesWithError: {} });
   }
 
   async handleSubmit() {
