@@ -12,12 +12,12 @@ import {
   Message,
 } from 'semantic-ui-react';
 import { withRouter } from 'react-router-dom';
-import { ufList } from './employeeInfo.utils';
-import { moneyMask, PipeCpf, PipeMoney } from '../../utils/maskAndPipes';
+import { statusList, ufList } from '../../utils/constants.utils';
+import { moneyMask, cpfMask, PipeCpf, PipeMoney } from '../../utils/masksAndPipes.utils';
 import { validate } from './employeeInfoValidation';
 import { toast } from 'react-toastify';
 
-import { API_URL } from '../../utils/constants';
+import { API_URL } from '../../utils/constants.utils';
 
 class EmployeesInfo extends Component {
   constructor(props) {
@@ -31,11 +31,7 @@ class EmployeesInfo extends Component {
         salario: '',
         status: '',
       },
-      statusList: [
-        { key: 1, text: 'Ativo', value: 'ATIVO' },
-        { key: 2, text: 'Bloqueado', value: 'BLOQUEADO' },
-        { key: 3, text: 'Inativo', value: 'INATIVO' },
-      ],
+      statusList: statusList,
       ufList: ufList,
       propertiesWithError: {},
       errorMessages: [],
@@ -64,18 +60,10 @@ class EmployeesInfo extends Component {
     this.setState({ employee });
   };
 
-  handleSelectChange = (e, { value, name }) => {
-    const { employee } = this.state;
-
-    employee[name] = value;
-    this.cleanInvalidInputs(name);
-    this.setState({ employee });
-  };
-
   cleanInvalidInputs(name) {
     const { propertiesWithError } = this.state;
-
     propertiesWithError[name] = false;
+    this.setState({ propertiesWithError });
   }
 
   async handleGetEmloyee(employeeId) {
@@ -93,7 +81,7 @@ class EmployeesInfo extends Component {
 
       this.setState({ employee });
     } catch (e) {
-      toast.error('Erro ao buscar funcionário\n' + e);
+      toast.error(`Erro ao buscar funcionário. ${e}`);
     }
   }
 
@@ -143,7 +131,7 @@ class EmployeesInfo extends Component {
 
       this.props.history.push('/employees');
     } catch (e) {
-      toast.error('Erro ao inserir/alterar funcionário\n' + e);
+      toast.error(`Erro ao inserir/alterar funcionário. ${e}`);
     }
   };
 
@@ -163,7 +151,7 @@ class EmployeesInfo extends Component {
 
       this.props.history.push('/employees');
     } catch (e) {
-      toast.error('Erro ao buscar funcionário\n' + e);
+      toast.error(`Erro ao buscar funcionário. ${e}`);
     }
   };
 
@@ -193,25 +181,11 @@ class EmployeesInfo extends Component {
                   onChange={this.handleInputChange}
                   error={propertiesWithError.nome}
                 />
+
                 <Form.Field error={propertiesWithError.cpf}>
                   <label>CPF</label>
                   <MaskedInput
-                    mask={[
-                      /\d/,
-                      /\d/,
-                      /\d/,
-                      '.',
-                      /\d/,
-                      /\d/,
-                      /\d/,
-                      '.',
-                      /\d/,
-                      /\d/,
-                      /\d/,
-                      '-',
-                      /\d/,
-                      /\d/,
-                    ]}
+                    mask={cpfMask}
                     guide={false}
                     placeholder="434.123.123-12"
                     name="cpf"
@@ -229,9 +203,22 @@ class EmployeesInfo extends Component {
                   placeholder="Selecione..."
                   name="ufNasc"
                   value={employee.ufNasc}
-                  onChange={this.handleSelectChange}
+                  onChange={this.handleInputChange}
                   error={propertiesWithError.ufNasc}
                 />
+
+                <Form.Select
+                  options={statusList}
+                  label="Status"
+                  placeholder="Selecione..."
+                  name="status"
+                  value={employee.status}
+                  onChange={this.handleInputChange}
+                  error={propertiesWithError.status}
+                />
+              </Form.Group>
+
+              <Form.Group widths="equal">
                 <Form.Input
                   fluid
                   label="Cargo"
@@ -241,18 +228,7 @@ class EmployeesInfo extends Component {
                   onChange={this.handleInputChange}
                   error={propertiesWithError.cargo}
                 />
-              </Form.Group>
 
-              <Form.Group widths="equal">
-                <Form.Select
-                  options={statusList}
-                  label="Status"
-                  placeholder="Selecione..."
-                  name="status"
-                  value={employee.status}
-                  onChange={this.handleSelectChange}
-                  error={propertiesWithError.status}
-                />
                 <Form.Field error={propertiesWithError.salario}>
                   <label>Salário</label>
                   <MaskedInput
@@ -270,12 +246,14 @@ class EmployeesInfo extends Component {
                 <Icon name="check" />
                 Salvar
               </Button>
+
               {employeeId ? (
                 <Button basic onClick={this.toggleDeleteModal} type="button" color="red">
                   Excluir
                 </Button>
               ) : null}
             </Form>
+
             {errorMessages.length ? (
               <Message error header="Existem alguns campos incorreros" list={errorMessages} />
             ) : null}

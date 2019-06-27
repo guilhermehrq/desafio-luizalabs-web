@@ -24,3 +24,20 @@ export const PipeMoney = (value) => {
 
   return `R$ ${splittedValue[0]},${splittedValue[1]}`;
 };
+
+export const cpfMask = [
+  /\d/,
+  /\d/,
+  /\d/,
+  '.',
+  /\d/,
+  /\d/,
+  /\d/,
+  '.',
+  /\d/,
+  /\d/,
+  /\d/,
+  '-',
+  /\d/,
+  /\d/,
+];

@@ -4,7 +4,7 @@ import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-import { API_URL } from '../../utils/constants';
+import { API_URL } from '../../utils/constants.utils';
 
 class EmployeesStates extends Component {
   constructor(props) {
@@ -32,7 +32,7 @@ class EmployeesStates extends Component {
 
       this.setState({ employeesStates });
     } catch (e) {
-      toast.error('Erro ao buscar funcinários\n' + e);
+      toast.error(`Erro ao buscar funcinários. ${e}`);
     }
   }
 

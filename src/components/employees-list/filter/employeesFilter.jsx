@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Button, Form, Message, Icon } from 'semantic-ui-react';
 import MaskedInput from 'react-text-mask';
-import { moneyMask } from '../../utils/maskAndPipes';
-import { validate } from './employeefilterValidation';
+import { moneyMask, cpfMask } from '../../../utils/masksAndPipes.utils';
+import { validate, prepareData } from './employeefilterValidation';
+import { statusList } from '../../../utils/constants.utils';
 
 export default class EmployeesFilter extends Component {
   constructor(props) {
@@ -16,13 +17,9 @@ export default class EmployeesFilter extends Component {
         salarioMin: '',
         salarioMax: '',
         status: '',
+        page: 1,
       },
-      statusList: [
-        { key: 1, text: '', value: '' },
-        { key: 2, text: 'Ativo', value: 'ATIVO' },
-        { key: 3, text: 'Bloqueado', value: 'BLOQUEADO' },
-        { key: 4, text: 'Inativo', value: 'INATIVO' },
-      ],
+      statusList: statusList,
       propertiesWithError: {},
       errorMessages: [],
     };
@@ -44,40 +41,16 @@ export default class EmployeesFilter extends Component {
     this.setState({ ...filter });
   };
 
-  handleSelectChange = (e, { value }) => {
-    const { filter } = this.state;
-
-    filter.status = value;
-    this.setState({ ...filter });
-  };
-
   cleanInvalidInputs(name) {
     const { propertiesWithError } = this.state;
-
     propertiesWithError[name] = false;
-  }
-
-  handleOnClean() {
-    const INITIAL_FILTER = {
-      nome: '',
-      cpf: '',
-      dataCad: '',
-      cargo: '',
-      salarioMin: '',
-      salarioMax: '',
-      status: '',
-    };
-
-    let { filter } = this.state;
-
-    filter = INITIAL_FILTER;
-    this.setState({ filter, errorMessages: [], propertiesWithError: {} });
+    this.setState({ propertiesWithError });
   }
 
   async handleSubmit() {
-    const { filter } = JSON.parse(JSON.stringify(this.state));
+    let { filter } = JSON.parse(JSON.stringify(this.state));
 
-    this.prepareData(filter);
+    filter = prepareData(filter);
 
     const validationResults = await validate(filter);
 
@@ -99,29 +72,23 @@ export default class EmployeesFilter extends Component {
     this.props.updateFilter(newFilter);
   }
 
-  formatDate(date) {
-    if (date) {
-      return date
-        .split('/')
-        .reverse()
-        .join('-');
-    }
-  }
+  handleOnClean() {
+    const INITIAL_FILTER = {
+      nome: '',
+      cpf: '',
+      dataCad: '',
+      cargo: '',
+      salarioMin: '',
+      salarioMax: '',
+      status: '',
+      page: 1,
+    };
 
-  prepareData(filter) {
-    filter.dataCad = this.formatDate(filter.dataCad);
+    let { filter } = this.state;
 
-    filter.cpf = filter.cpf.replace(/\D+/g, '');
-
-    filter.salarioMin = filter.salarioMin
-      ? parseFloat(filter.salarioMin.replace(',', '.').replace('R$ ', ''))
-      : '';
-
-    filter.salarioMax = filter.salarioMax
-      ? parseFloat(filter.salarioMax.replace(',', '.').replace('R$ ', ''))
-      : '';
-
-    return filter;
+    filter = INITIAL_FILTER;
+    this.setState({ filter, errorMessages: [], propertiesWithError: {} });
+    this.props.updateFilter(filter);
   }
 
   render() {
@@ -142,22 +109,7 @@ export default class EmployeesFilter extends Component {
             <Form.Field error={propertiesWithError.cpf}>
               <label>CPF</label>
               <MaskedInput
-                mask={[
-                  /\d/,
-                  /\d/,
-                  /\d/,
-                  '.',
-                  /\d/,
-                  /\d/,
-                  /\d/,
-                  '.',
-                  /\d/,
-                  /\d/,
-                  /\d/,
-                  '-',
-                  /\d/,
-                  /\d/,
-                ]}
+                mask={cpfMask}
                 guide={false}
                 placeholder="434.123.123-12"
                 name="cpf"
@@ -192,7 +144,7 @@ export default class EmployeesFilter extends Component {
               placeholder="Selecione..."
               name="status"
               value={filter.status}
-              onChange={this.handleSelectChange}
+              onChange={this.handleInputChange}
             />
           </Form.Group>
           <Form.Group widths="equal">

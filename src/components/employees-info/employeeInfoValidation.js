@@ -30,7 +30,7 @@ export const validate = async (data) => {
     propertiesWithError.status = true;
   }
 
-  if (!salario && salario != 0) {
+  if (!salario && salario !== 0) {
     errorMessages.push('Salario é obrigatório');
     propertiesWithError.salario = true;
   }

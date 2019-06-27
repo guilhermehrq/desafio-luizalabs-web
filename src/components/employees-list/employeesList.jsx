@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Container, Header, Segment } from 'semantic-ui-react';
-import EmployeesFilter from './employeesFilter';
-import EmployeesTable from './employeesTable';
 import { toast } from 'react-toastify';
+import EmployeesFilter from './filter/employeesFilter';
+import EmployeesTable from './employeesTable';
 
-import { API_URL } from '../../utils/constants';
+import { API_URL } from '../../utils/constants.utils';
 
 export default class EmployeesList extends Component {
   constructor(props) {
@@ -43,7 +43,7 @@ export default class EmployeesList extends Component {
 
       this.setState({ employees, totalRows });
     } catch (e) {
-      toast.error('Erro ao buscar funcinários\n' + e);
+      toast.error(`Erro ao buscar funcinários. ${e}`);
     }
   }
 
@@ -51,8 +51,8 @@ export default class EmployeesList extends Component {
     let { filter } = this.state;
 
     filter = newFilter;
-
     this.setState({ filter });
+
     setTimeout(() => {
       this.getEmployees();
     });
@@ -62,21 +62,19 @@ export default class EmployeesList extends Component {
     const { employees, totalRows, filter } = this.state;
 
     return (
-      <>
-        <Container>
-          <Segment>
-            <Header as="h3">Filtro de funcionários</Header>
-            <EmployeesFilter updateFilter={this.updateFilter} />
-          </Segment>
+      <Container>
+        <Segment>
+          <Header as="h3">Filtro de funcionários</Header>
+          <EmployeesFilter updateFilter={this.updateFilter} />
+        </Segment>
 
-          <EmployeesTable
-            employeesList={employees}
-            totalRows={totalRows}
-            filter={filter}
-            updateFilter={this.updateFilter}
-          />
-        </Container>
-      </>
+        <EmployeesTable
+          employeesList={employees}
+          totalRows={totalRows}
+          filter={filter}
+          updateFilter={this.updateFilter}
+        />
+      </Container>
     );
   }
 }

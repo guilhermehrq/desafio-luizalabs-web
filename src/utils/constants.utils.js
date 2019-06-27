@@ -1,3 +1,5 @@
+export const API_URL = process.env.API_URL || 'http://localhost:3001';
+
 export const ufList = [
   { key: 1, text: 'AC', value: 'AC' },
   { key: 2, text: 'AL', value: 'AL' },
@@ -26,4 +28,11 @@ export const ufList = [
   { key: 25, text: 'SP', value: 'SP' },
   { key: 26, text: 'SE', value: 'SE' },
   { key: 27, text: 'TO', value: 'TO' },
+];
+
+export const statusList = [
+  { key: 1, text: '', value: '' },
+  { key: 2, text: 'Ativo', value: 'ATIVO' },
+  { key: 3, text: 'Bloqueado', value: 'BLOQUEADO' },
+  { key: 4, text: 'Inativo', value: 'INATIVO' },
 ];

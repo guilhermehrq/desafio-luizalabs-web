@@ -23,13 +23,13 @@ export const validate = async (data) => {
     }
 
     if (error) {
-      errorMessages.push('Data inválida');
+      errorMessages.push('Data de cadastro inválida');
       propertiesWithError.dataCad = true;
     }
   }
 
   if (salarioMin && salarioMax && salarioMin > salarioMax) {
-    errorMessages.push('Salário mínimo deve ser menor que o salário máximo');
+    errorMessages.push('Salário Mínimo deve ser menor que o Salário Máximo');
 
     propertiesWithError.salarioMin = true;
     propertiesWithError.salarioMax = true;
@@ -38,6 +38,32 @@ export const validate = async (data) => {
   return {
     errorMessages,
     propertiesWithError,
-    errors: true,
   };
+};
+
+const formatDate = (date) => {
+  if (date) {
+    return date
+      .split('/')
+      .reverse()
+      .join('-');
+  }
+
+  return '';
+};
+
+export const prepareData = (filter) => {
+  filter.dataCad = formatDate(filter.dataCad);
+
+  filter.cpf = filter.cpf.replace(/\D+/g, '');
+
+  filter.salarioMin = filter.salarioMin
+    ? parseFloat(filter.salarioMin.replace(',', '.').replace('R$ ', ''))
+    : '';
+
+  filter.salarioMax = filter.salarioMax
+    ? parseFloat(filter.salarioMax.replace(',', '.').replace('R$ ', ''))
+    : '';
+
+  return filter;
 };
