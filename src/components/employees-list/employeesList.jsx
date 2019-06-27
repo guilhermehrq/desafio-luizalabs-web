@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Container, Header, Segment } from 'semantic-ui-react';
-import EmployeesFilter from './employees-filter';
-import EmployeesTable from './employees-table';
+import EmployeesFilter from './employeesFilter';
+import EmployeesTable from './employeesTable';
 
 import { API_URL } from '../../utils/constants';
 

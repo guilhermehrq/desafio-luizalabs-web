@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Form, Message, Icon } from 'semantic-ui-react';
 import MaskedInput from 'react-text-mask';
 import { moneyMask } from '../../utils/maskAndPipes';
+import { validate } from './employeefilterValidation';
 
 export default class EmployeesFilter extends Component {
   constructor(props) {
@@ -22,6 +23,8 @@ export default class EmployeesFilter extends Component {
         { key: 3, text: 'Bloqueado', value: 'BLOQUEADO' },
         { key: 4, text: 'Inativo', value: 'INATIVO' },
       ],
+      propertiesWithError: {},
+      errorMessages: [],
     };
   }
 
@@ -29,12 +32,15 @@ export default class EmployeesFilter extends Component {
     const { filter } = this.state;
 
     filter[name] = value;
+    this.cleanInvalidInputs(name);
     this.setState({ ...filter });
   };
 
   handleChangeMaskedField = e => {
     const { filter } = this.state;
+
     filter[e.target.name] = e.target.value;
+    this.cleanInvalidInputs(e.target.name);
     this.setState({ ...filter });
   };
 
@@ -44,6 +50,12 @@ export default class EmployeesFilter extends Component {
     filter.status = value;
     this.setState({ ...filter });
   };
+
+  cleanInvalidInputs(name) {
+    const { propertiesWithError } = this.state;
+
+    propertiesWithError[name] = false;
+  }
 
   handleOnClean() {
     const INITIAL_FILTER = {
@@ -62,13 +74,28 @@ export default class EmployeesFilter extends Component {
     this.setState({ filter });
   }
 
-  handleSubmit() {
+  async handleSubmit() {
     const { filter } = JSON.parse(JSON.stringify(this.state));
 
     this.prepareData(filter);
 
-    const newFilter = { ...filter, page: 1 };
+    const validationResults = await validate(filter);
 
+    if (validationResults.errorMessages.length) {
+      this.setState({
+        errorMessages: validationResults.errorMessages,
+        propertiesWithError: validationResults.propertiesWithError,
+      });
+
+      return;
+    }
+
+    this.setState({
+      errorMessages: [],
+      propertiesWithError: {},
+    });
+
+    const newFilter = { ...filter, page: 1 };
     this.props.updateFilter(newFilter);
   }
 
@@ -98,7 +125,7 @@ export default class EmployeesFilter extends Component {
   }
 
   render() {
-    const { statusList, filter } = this.state;
+    const { statusList, filter, propertiesWithError, errorMessages } = this.state;
 
     return (
       <>
@@ -112,7 +139,7 @@ export default class EmployeesFilter extends Component {
             onChange={this.handleInputChange}
           />
           <Form.Group widths="equal">
-            <Form.Field>
+            <Form.Field error={propertiesWithError.cpf}>
               <label>CPF</label>
               <MaskedInput
                 mask={[
@@ -138,7 +165,7 @@ export default class EmployeesFilter extends Component {
                 onChange={this.handleChangeMaskedField}
               />
             </Form.Field>
-            <Form.Field>
+            <Form.Field error={propertiesWithError.dataCad}>
               <label>Data de Cadastro</label>
               <MaskedInput
                 mask={[/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]}
@@ -169,7 +196,7 @@ export default class EmployeesFilter extends Component {
             />
           </Form.Group>
           <Form.Group widths="equal">
-            <Form.Field>
+            <Form.Field error={propertiesWithError.salarioMin}>
               <label>Salário Mínimo</label>
               <MaskedInput
                 mask={moneyMask}
@@ -180,7 +207,7 @@ export default class EmployeesFilter extends Component {
                 onChange={this.handleChangeMaskedField}
               />
             </Form.Field>
-            <Form.Field>
+            <Form.Field error={propertiesWithError.salarioMax}>
               <label>Salário Máximo</label>
               <MaskedInput
                 mask={moneyMask}
@@ -200,6 +227,9 @@ export default class EmployeesFilter extends Component {
             Limpar
           </Button>
         </Form>
+        {errorMessages.length ? (
+          <Message error header="Existem alguns campos incorreros" list={errorMessages} />
+        ) : null}
       </>
     );
   }

@@ -1,10 +1,20 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Button, Form, Container, Header, Segment, Icon, Confirm } from 'semantic-ui-react';
-import { withRouter } from 'react-router-dom';
-import { ufList } from './employeeInfoUtils';
 import MaskedInput from 'react-text-mask';
+import {
+  Button,
+  Form,
+  Container,
+  Header,
+  Segment,
+  Icon,
+  Confirm,
+  Message,
+} from 'semantic-ui-react';
+import { withRouter } from 'react-router-dom';
+import { ufList } from './employeeInfo.utils';
 import { moneyMask, PipeCpf, PipeMoney } from '../../utils/maskAndPipes';
+import { validate } from './employeeInfoValidation';
 
 import { API_URL } from '../../utils/constants';
 
@@ -26,6 +36,8 @@ class EmployeesInfo extends Component {
         { key: 3, text: 'Inativo', value: 'INATIVO' },
       ],
       ufList: ufList,
+      propertiesWithError: {},
+      errorMessages: [],
     };
   }
 
@@ -40,12 +52,14 @@ class EmployeesInfo extends Component {
     const { employee } = this.state;
 
     employee[name] = value;
+    this.cleanInvalidInputs(name);
     this.setState({ employee });
   };
 
   handleChangeMaskedField = e => {
     const { employee } = this.state;
     employee[e.target.name] = e.target.value;
+    this.cleanInvalidInputs(e.target.name);
     this.setState({ employee });
   };
 
@@ -53,8 +67,15 @@ class EmployeesInfo extends Component {
     const { employee } = this.state;
 
     employee[name] = value;
+    this.cleanInvalidInputs(name);
     this.setState({ employee });
   };
+
+  cleanInvalidInputs(name) {
+    const { propertiesWithError } = this.state;
+
+    propertiesWithError[name] = false;
+  }
 
   async handleGetEmloyee(employeeId) {
     try {
@@ -83,6 +104,22 @@ class EmployeesInfo extends Component {
       employee.cpf = employee.cpf.replace(/\D+/g, '');
       employee.salario = parseFloat(employee.salario.replace(',', '.').replace('R$ ', ''));
 
+      const validationResults = await validate(employee);
+
+      if (validationResults.errorMessages.length) {
+        this.setState({
+          errorMessages: validationResults.errorMessages,
+          propertiesWithError: validationResults.propertiesWithError,
+        });
+
+        return;
+      }
+
+      this.setState({
+        errorMessages: [],
+        propertiesWithError: {},
+      });
+
       if (!employeeId) {
         await axios.request({
           method: 'POST',
@@ -109,6 +146,8 @@ class EmployeesInfo extends Component {
     try {
       const { employee } = this.state;
 
+      employee.cpf = employee.cpf.replace(/\D+/g, '');
+
       await axios.request({
         method: 'DELETE',
         baseURL: API_URL,
@@ -129,7 +168,7 @@ class EmployeesInfo extends Component {
 
   render() {
     const { employeeId } = this.props.match.params;
-    const { employee, statusList, ufList } = this.state;
+    const { employee, statusList, ufList, errorMessages, propertiesWithError } = this.state;
 
     return (
       <>
@@ -145,18 +184,9 @@ class EmployeesInfo extends Component {
                   name="nome"
                   value={employee.nome}
                   onChange={this.handleInputChange}
+                  error={propertiesWithError.nome}
                 />
-                {/* <Form.Input
-                  fluid
-                  label="CPF"
-                  placeholder="CPF do funcionário"
-                  name="cpf"
-                  maxLength="11"
-                  value={employee.cpf}
-                  onChange={this.handleInputChange}
-                  readOnly={employeeId}
-                /> */}
-                <Form.Field>
+                <Form.Field error={propertiesWithError.cpf}>
                   <label>CPF</label>
                   <MaskedInput
                     mask={[
@@ -193,6 +223,7 @@ class EmployeesInfo extends Component {
                   name="ufNasc"
                   value={employee.ufNasc}
                   onChange={this.handleSelectChange}
+                  error={propertiesWithError.ufNasc}
                 />
                 <Form.Input
                   fluid
@@ -201,6 +232,7 @@ class EmployeesInfo extends Component {
                   name="cargo"
                   value={employee.cargo}
                   onChange={this.handleInputChange}
+                  error={propertiesWithError.cargo}
                 />
               </Form.Group>
 
@@ -212,8 +244,9 @@ class EmployeesInfo extends Component {
                   name="status"
                   value={employee.status}
                   onChange={this.handleSelectChange}
+                  error={propertiesWithError.status}
                 />
-                <Form.Field>
+                <Form.Field error={propertiesWithError.salario}>
                   <label>Salário</label>
                   <MaskedInput
                     mask={moneyMask}
@@ -236,6 +269,9 @@ class EmployeesInfo extends Component {
                 </Button>
               ) : null}
             </Form>
+            {errorMessages.length ? (
+              <Message error header="Existem alguns campos incorreros" list={errorMessages} />
+            ) : null}
           </Segment>
         </Container>
 

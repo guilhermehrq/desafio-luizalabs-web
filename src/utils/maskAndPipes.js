@@ -20,7 +20,7 @@ export const PipeDate = (date) => {
 
 export const PipeMoney = (value) => {
   const splittedValue = value.toString().split('.');
-  splittedValue[1] = splittedValue[1].padEnd(2, '0');
+  splittedValue[1] = splittedValue[1] ? splittedValue[1].padEnd(2, '0') : '00';
 
   return `R$ ${splittedValue[0]},${splittedValue[1]}`;
 };
