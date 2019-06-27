@@ -1,0 +1,872 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing EmployeesFilter Component should render the component correctly 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <EmployeesFilter>
+      <Form
+        as="form"
+        onSubmit={[Function]}
+      >
+        <form
+          className="ui form"
+          onSubmit={[Function]}
+        >
+          <FormInput
+            as={[Function]}
+            control={[Function]}
+            fluid={true}
+            label="Nome"
+            name="nome"
+            onChange={[Function]}
+            placeholder="Fulano de Tal"
+            value=""
+          >
+            <FormField
+              control={[Function]}
+              fluid={true}
+              label="Nome"
+              name="nome"
+              onChange={[Function]}
+              placeholder="Fulano de Tal"
+              value=""
+            >
+              <div
+                className="field"
+              >
+                <label>
+                  Nome
+                </label>
+                <Input
+                  fluid={true}
+                  name="nome"
+                  onChange={[Function]}
+                  placeholder="Fulano de Tal"
+                  type="text"
+                  value=""
+                >
+                  <div
+                    className="ui fluid input"
+                  >
+                    <input
+                      name="nome"
+                      onChange={[Function]}
+                      placeholder="Fulano de Tal"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </Input>
+              </div>
+            </FormField>
+          </FormInput>
+          <FormGroup
+            widths="equal"
+          >
+            <div
+              className="equal width fields"
+            >
+              <FormField>
+                <div
+                  className="field"
+                >
+                  <label>
+                    CPF
+                  </label>
+                  <t
+                    guide={false}
+                    mask={
+                      Array [
+                        /\\\\d/,
+                        /\\\\d/,
+                        /\\\\d/,
+                        ".",
+                        /\\\\d/,
+                        /\\\\d/,
+                        /\\\\d/,
+                        ".",
+                        /\\\\d/,
+                        /\\\\d/,
+                        /\\\\d/,
+                        "-",
+                        /\\\\d/,
+                        /\\\\d/,
+                      ]
+                    }
+                    name="cpf"
+                    onChange={[Function]}
+                    placeholder="434.123.123-12"
+                    render={[Function]}
+                    value=""
+                  >
+                    <input
+                      defaultValue=""
+                      name="cpf"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="434.123.123-12"
+                    />
+                  </t>
+                </div>
+              </FormField>
+              <FormField>
+                <div
+                  className="field"
+                >
+                  <label>
+                    Data de Cadastro
+                  </label>
+                  <t
+                    guide={false}
+                    mask={
+                      Array [
+                        /\\\\d/,
+                        /\\\\d/,
+                        "/",
+                        /\\\\d/,
+                        /\\\\d/,
+                        "/",
+                        /\\\\d/,
+                        /\\\\d/,
+                        /\\\\d/,
+                        /\\\\d/,
+                      ]
+                    }
+                    name="dataCad"
+                    onChange={[Function]}
+                    placeholder="26/06/2019"
+                    render={[Function]}
+                    value=""
+                  >
+                    <input
+                      defaultValue=""
+                      name="dataCad"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="26/06/2019"
+                    />
+                  </t>
+                </div>
+              </FormField>
+            </div>
+          </FormGroup>
+          <FormGroup
+            widths="equal"
+          >
+            <div
+              className="equal width fields"
+            >
+              <FormInput
+                as={[Function]}
+                control={[Function]}
+                fluid={true}
+                label="Cargo"
+                name="cargo"
+                onChange={[Function]}
+                placeholder="Dev Pl"
+                value=""
+              >
+                <FormField
+                  control={[Function]}
+                  fluid={true}
+                  label="Cargo"
+                  name="cargo"
+                  onChange={[Function]}
+                  placeholder="Dev Pl"
+                  value=""
+                >
+                  <div
+                    className="field"
+                  >
+                    <label>
+                      Cargo
+                    </label>
+                    <Input
+                      fluid={true}
+                      name="cargo"
+                      onChange={[Function]}
+                      placeholder="Dev Pl"
+                      type="text"
+                      value=""
+                    >
+                      <div
+                        className="ui fluid input"
+                      >
+                        <input
+                          name="cargo"
+                          onChange={[Function]}
+                          placeholder="Dev Pl"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </Input>
+                  </div>
+                </FormField>
+              </FormInput>
+              <FormSelect
+                as={[Function]}
+                control={[Function]}
+                label="Status"
+                name="status"
+                onChange={[Function]}
+                options={
+                  Array [
+                    Object {
+                      "key": 1,
+                      "text": "",
+                      "value": "",
+                    },
+                    Object {
+                      "key": 2,
+                      "text": "Ativo",
+                      "value": "ATIVO",
+                    },
+                    Object {
+                      "key": 3,
+                      "text": "Bloqueado",
+                      "value": "BLOQUEADO",
+                    },
+                    Object {
+                      "key": 4,
+                      "text": "Inativo",
+                      "value": "INATIVO",
+                    },
+                  ]
+                }
+                placeholder="Selecione..."
+                value=""
+              >
+                <FormField
+                  control={[Function]}
+                  label="Status"
+                  name="status"
+                  onChange={[Function]}
+                  options={
+                    Array [
+                      Object {
+                        "key": 1,
+                        "text": "",
+                        "value": "",
+                      },
+                      Object {
+                        "key": 2,
+                        "text": "Ativo",
+                        "value": "ATIVO",
+                      },
+                      Object {
+                        "key": 3,
+                        "text": "Bloqueado",
+                        "value": "BLOQUEADO",
+                      },
+                      Object {
+                        "key": 4,
+                        "text": "Inativo",
+                        "value": "INATIVO",
+                      },
+                    ]
+                  }
+                  placeholder="Selecione..."
+                  value=""
+                >
+                  <div
+                    className="field"
+                  >
+                    <label>
+                      Status
+                    </label>
+                    <Select
+                      name="status"
+                      onChange={[Function]}
+                      options={
+                        Array [
+                          Object {
+                            "key": 1,
+                            "text": "",
+                            "value": "",
+                          },
+                          Object {
+                            "key": 2,
+                            "text": "Ativo",
+                            "value": "ATIVO",
+                          },
+                          Object {
+                            "key": 3,
+                            "text": "Bloqueado",
+                            "value": "BLOQUEADO",
+                          },
+                          Object {
+                            "key": 4,
+                            "text": "Inativo",
+                            "value": "INATIVO",
+                          },
+                        ]
+                      }
+                      placeholder="Selecione..."
+                      value=""
+                    >
+                      <Dropdown
+                        additionLabel="Add "
+                        additionPosition="top"
+                        closeOnBlur={true}
+                        closeOnEscape={true}
+                        deburr={false}
+                        icon="dropdown"
+                        minCharacters={1}
+                        name="status"
+                        noResultsMessage="No results found."
+                        onChange={[Function]}
+                        openOnFocus={true}
+                        options={
+                          Array [
+                            Object {
+                              "key": 1,
+                              "text": "",
+                              "value": "",
+                            },
+                            Object {
+                              "key": 2,
+                              "text": "Ativo",
+                              "value": "ATIVO",
+                            },
+                            Object {
+                              "key": 3,
+                              "text": "Bloqueado",
+                              "value": "BLOQUEADO",
+                            },
+                            Object {
+                              "key": 4,
+                              "text": "Inativo",
+                              "value": "INATIVO",
+                            },
+                          ]
+                        }
+                        placeholder="Selecione..."
+                        renderLabel={[Function]}
+                        searchInput="text"
+                        selectOnBlur={true}
+                        selectOnNavigation={true}
+                        selection={true}
+                        value=""
+                        wrapSelection={true}
+                      >
+                        <Ref
+                          innerRef={
+                            Object {
+                              "current": <div
+                                aria-expanded="false"
+                                class="ui selection dropdown"
+                                name="status"
+                                role="listbox"
+                                tabindex="0"
+                              >
+                                <div
+                                  aria-atomic="true"
+                                  aria-live="polite"
+                                  class="default text"
+                                  role="alert"
+                                >
+                                  Selecione...
+                                </div>
+                                <i
+                                  aria-hidden="true"
+                                  class="dropdown icon"
+                                />
+                                <div
+                                  class="menu transition"
+                                >
+                                  <div
+                                    aria-checked="true"
+                                    aria-selected="true"
+                                    class="active selected item"
+                                    role="option"
+                                    style="pointer-events: all;"
+                                  >
+                                    <span
+                                      class="text"
+                                    />
+                                  </div>
+                                  <div
+                                    aria-checked="false"
+                                    aria-selected="false"
+                                    class="item"
+                                    role="option"
+                                    style="pointer-events: all;"
+                                  >
+                                    <span
+                                      class="text"
+                                    >
+                                      Ativo
+                                    </span>
+                                  </div>
+                                  <div
+                                    aria-checked="false"
+                                    aria-selected="false"
+                                    class="item"
+                                    role="option"
+                                    style="pointer-events: all;"
+                                  >
+                                    <span
+                                      class="text"
+                                    >
+                                      Bloqueado
+                                    </span>
+                                  </div>
+                                  <div
+                                    aria-checked="false"
+                                    aria-selected="false"
+                                    class="item"
+                                    role="option"
+                                    style="pointer-events: all;"
+                                  >
+                                    <span
+                                      class="text"
+                                    >
+                                      Inativo
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>,
+                            }
+                          }
+                        >
+                          <RefFindNode
+                            innerRef={
+                              Object {
+                                "current": <div
+                                  aria-expanded="false"
+                                  class="ui selection dropdown"
+                                  name="status"
+                                  role="listbox"
+                                  tabindex="0"
+                                >
+                                  <div
+                                    aria-atomic="true"
+                                    aria-live="polite"
+                                    class="default text"
+                                    role="alert"
+                                  >
+                                    Selecione...
+                                  </div>
+                                  <i
+                                    aria-hidden="true"
+                                    class="dropdown icon"
+                                  />
+                                  <div
+                                    class="menu transition"
+                                  >
+                                    <div
+                                      aria-checked="true"
+                                      aria-selected="true"
+                                      class="active selected item"
+                                      role="option"
+                                      style="pointer-events: all;"
+                                    >
+                                      <span
+                                        class="text"
+                                      />
+                                    </div>
+                                    <div
+                                      aria-checked="false"
+                                      aria-selected="false"
+                                      class="item"
+                                      role="option"
+                                      style="pointer-events: all;"
+                                    >
+                                      <span
+                                        class="text"
+                                      >
+                                        Ativo
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-checked="false"
+                                      aria-selected="false"
+                                      class="item"
+                                      role="option"
+                                      style="pointer-events: all;"
+                                    >
+                                      <span
+                                        class="text"
+                                      >
+                                        Bloqueado
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-checked="false"
+                                      aria-selected="false"
+                                      class="item"
+                                      role="option"
+                                      style="pointer-events: all;"
+                                    >
+                                      <span
+                                        class="text"
+                                      >
+                                        Inativo
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>,
+                              }
+                            }
+                          >
+                            <div
+                              aria-expanded={false}
+                              className="ui selection dropdown"
+                              name="status"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              onClick={[Function]}
+                              onFocus={[Function]}
+                              onMouseDown={[Function]}
+                              role="listbox"
+                              tabIndex={0}
+                            >
+                              <div
+                                aria-atomic={true}
+                                aria-live="polite"
+                                className="default text"
+                                role="alert"
+                              >
+                                Selecione...
+                              </div>
+                              <Icon
+                                as="i"
+                                className=""
+                                name="dropdown"
+                                onClick={[Function]}
+                              >
+                                <i
+                                  aria-hidden="true"
+                                  className="dropdown icon"
+                                  onClick={[Function]}
+                                />
+                              </Icon>
+                              <DropdownMenu>
+                                <div
+                                  className="menu transition"
+                                >
+                                  <DropdownItem
+                                    active={true}
+                                    key="1"
+                                    onClick={[Function]}
+                                    selected={true}
+                                    style={
+                                      Object {
+                                        "pointerEvents": "all",
+                                      }
+                                    }
+                                    text=""
+                                    value=""
+                                  >
+                                    <div
+                                      aria-checked={true}
+                                      aria-selected={true}
+                                      className="active selected item"
+                                      onClick={[Function]}
+                                      role="option"
+                                      style={
+                                        Object {
+                                          "pointerEvents": "all",
+                                        }
+                                      }
+                                    >
+                                      <span
+                                        className="text"
+                                      />
+                                    </div>
+                                  </DropdownItem>
+                                  <DropdownItem
+                                    active={false}
+                                    key="2"
+                                    onClick={[Function]}
+                                    selected={false}
+                                    style={
+                                      Object {
+                                        "pointerEvents": "all",
+                                      }
+                                    }
+                                    text="Ativo"
+                                    value="ATIVO"
+                                  >
+                                    <div
+                                      aria-checked={false}
+                                      aria-selected={false}
+                                      className="item"
+                                      onClick={[Function]}
+                                      role="option"
+                                      style={
+                                        Object {
+                                          "pointerEvents": "all",
+                                        }
+                                      }
+                                    >
+                                      <span
+                                        className="text"
+                                      >
+                                        Ativo
+                                      </span>
+                                    </div>
+                                  </DropdownItem>
+                                  <DropdownItem
+                                    active={false}
+                                    key="3"
+                                    onClick={[Function]}
+                                    selected={false}
+                                    style={
+                                      Object {
+                                        "pointerEvents": "all",
+                                      }
+                                    }
+                                    text="Bloqueado"
+                                    value="BLOQUEADO"
+                                  >
+                                    <div
+                                      aria-checked={false}
+                                      aria-selected={false}
+                                      className="item"
+                                      onClick={[Function]}
+                                      role="option"
+                                      style={
+                                        Object {
+                                          "pointerEvents": "all",
+                                        }
+                                      }
+                                    >
+                                      <span
+                                        className="text"
+                                      >
+                                        Bloqueado
+                                      </span>
+                                    </div>
+                                  </DropdownItem>
+                                  <DropdownItem
+                                    active={false}
+                                    key="4"
+                                    onClick={[Function]}
+                                    selected={false}
+                                    style={
+                                      Object {
+                                        "pointerEvents": "all",
+                                      }
+                                    }
+                                    text="Inativo"
+                                    value="INATIVO"
+                                  >
+                                    <div
+                                      aria-checked={false}
+                                      aria-selected={false}
+                                      className="item"
+                                      onClick={[Function]}
+                                      role="option"
+                                      style={
+                                        Object {
+                                          "pointerEvents": "all",
+                                        }
+                                      }
+                                    >
+                                      <span
+                                        className="text"
+                                      >
+                                        Inativo
+                                      </span>
+                                    </div>
+                                  </DropdownItem>
+                                </div>
+                              </DropdownMenu>
+                            </div>
+                          </RefFindNode>
+                        </Ref>
+                      </Dropdown>
+                    </Select>
+                  </div>
+                </FormField>
+              </FormSelect>
+            </div>
+          </FormGroup>
+          <FormGroup
+            widths="equal"
+          >
+            <div
+              className="equal width fields"
+            >
+              <FormField>
+                <div
+                  className="field"
+                >
+                  <label>
+                    Salário Mínimo
+                  </label>
+                  <t
+                    guide={false}
+                    mask={[Function]}
+                    name="salarioMin"
+                    onChange={[Function]}
+                    placeholder="10,00"
+                    render={[Function]}
+                    value=""
+                  >
+                    <input
+                      defaultValue=""
+                      name="salarioMin"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="10,00"
+                    />
+                  </t>
+                </div>
+              </FormField>
+              <FormField>
+                <div
+                  className="field"
+                >
+                  <label>
+                    Salário Máximo
+                  </label>
+                  <t
+                    guide={false}
+                    mask={[Function]}
+                    name="salarioMax"
+                    onChange={[Function]}
+                    placeholder="1000,00"
+                    render={[Function]}
+                    value=""
+                  >
+                    <input
+                      defaultValue=""
+                      name="salarioMax"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="1000,00"
+                    />
+                  </t>
+                </div>
+              </FormField>
+            </div>
+          </FormGroup>
+          <Button
+            as="button"
+            icon={true}
+            labelPosition="left"
+            primary={true}
+            type="submit"
+          >
+            <Ref
+              innerRef={
+                Object {
+                  "current": <button
+                    class="ui icon primary left labeled button"
+                    type="submit"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="search icon"
+                    />
+                    Pesquisar
+                  </button>,
+                }
+              }
+            >
+              <RefFindNode
+                innerRef={
+                  Object {
+                    "current": <button
+                      class="ui icon primary left labeled button"
+                      type="submit"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="search icon"
+                      />
+                      Pesquisar
+                    </button>,
+                  }
+                }
+              >
+                <button
+                  className="ui icon primary left labeled button"
+                  onClick={[Function]}
+                  type="submit"
+                >
+                  <Icon
+                    as="i"
+                    name="search"
+                  >
+                    <i
+                      aria-hidden="true"
+                      className="search icon"
+                      onClick={[Function]}
+                    />
+                  </Icon>
+                  Pesquisar
+                </button>
+              </RefFindNode>
+            </Ref>
+          </Button>
+          <Button
+            as="button"
+            basic={true}
+            onClick={[Function]}
+            type="button"
+          >
+            <Ref
+              innerRef={
+                Object {
+                  "current": <button
+                    class="ui basic button"
+                    type="button"
+                  >
+                    Limpar
+                  </button>,
+                }
+              }
+            >
+              <RefFindNode
+                innerRef={
+                  Object {
+                    "current": <button
+                      class="ui basic button"
+                      type="button"
+                    >
+                      Limpar
+                    </button>,
+                  }
+                }
+              >
+                <button
+                  className="ui basic button"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Limpar
+                </button>
+              </RefFindNode>
+            </Ref>
+          </Button>
+        </form>
+      </Form>
+    </EmployeesFilter>
+  </Router>
+</BrowserRouter>
+`;

@@ -1,0 +1,575 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing EmployeesTable Component should render the component correctly 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <withRouter(EmployeesTable)
+      employeesList={Array []}
+      filter={
+        Object {
+          "page": 1,
+        }
+      }
+      totalRows={1}
+    >
+      <EmployeesTable
+        employeesList={Array []}
+        filter={
+          Object {
+            "page": 1,
+          }
+        }
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "createHref": [Function],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+        location={
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          }
+        }
+        match={
+          Object {
+            "isExact": true,
+            "params": Object {},
+            "path": "/",
+            "url": "/",
+          }
+        }
+        totalRows={1}
+      >
+        <Table
+          as="table"
+          celled={true}
+          style={
+            Object {
+              "marginBottom": "16px",
+            }
+          }
+        >
+          <table
+            className="ui celled table"
+            style={
+              Object {
+                "marginBottom": "16px",
+              }
+            }
+          >
+            <TableHeader
+              as="thead"
+            >
+              <thead
+                className=""
+              >
+                <TableRow
+                  as="tr"
+                  cellAs="td"
+                >
+                  <tr
+                    className=""
+                  >
+                    <TableHeaderCell
+                      as="th"
+                    >
+                      <TableCell
+                        as="th"
+                        className=""
+                      >
+                        <th
+                          className=""
+                        >
+                          CPF
+                        </th>
+                      </TableCell>
+                    </TableHeaderCell>
+                    <TableHeaderCell
+                      as="th"
+                    >
+                      <TableCell
+                        as="th"
+                        className=""
+                      >
+                        <th
+                          className=""
+                        >
+                          Nome
+                        </th>
+                      </TableCell>
+                    </TableHeaderCell>
+                    <TableHeaderCell
+                      as="th"
+                    >
+                      <TableCell
+                        as="th"
+                        className=""
+                      >
+                        <th
+                          className=""
+                        >
+                          UF
+                        </th>
+                      </TableCell>
+                    </TableHeaderCell>
+                    <TableHeaderCell
+                      as="th"
+                    >
+                      <TableCell
+                        as="th"
+                        className=""
+                      >
+                        <th
+                          className=""
+                        >
+                          Cargo
+                        </th>
+                      </TableCell>
+                    </TableHeaderCell>
+                    <TableHeaderCell
+                      as="th"
+                    >
+                      <TableCell
+                        as="th"
+                        className=""
+                      >
+                        <th
+                          className=""
+                        >
+                          Salário
+                        </th>
+                      </TableCell>
+                    </TableHeaderCell>
+                    <TableHeaderCell
+                      as="th"
+                    >
+                      <TableCell
+                        as="th"
+                        className=""
+                      >
+                        <th
+                          className=""
+                        >
+                          Data cadastro
+                        </th>
+                      </TableCell>
+                    </TableHeaderCell>
+                    <TableHeaderCell
+                      as="th"
+                    >
+                      <TableCell
+                        as="th"
+                        className=""
+                      >
+                        <th
+                          className=""
+                        >
+                          Status
+                        </th>
+                      </TableCell>
+                    </TableHeaderCell>
+                  </tr>
+                </TableRow>
+              </thead>
+            </TableHeader>
+            <TableBody
+              as="tbody"
+            >
+              <tbody
+                className=""
+              >
+                <TableRow
+                  as="tr"
+                  cellAs="td"
+                >
+                  <tr
+                    className=""
+                  >
+                    <TableCell
+                      as="td"
+                      colSpan="7"
+                    >
+                      <td
+                        className=""
+                        colSpan="7"
+                      >
+                        Nenhum funcionário encontrado...
+                      </td>
+                    </TableCell>
+                  </tr>
+                </TableRow>
+              </tbody>
+            </TableBody>
+            <TableFooter
+              as="tfoot"
+            >
+              <TableHeader
+                as="tfoot"
+              >
+                <tfoot
+                  className=""
+                >
+                  <TableRow
+                    as="tr"
+                    cellAs="td"
+                  >
+                    <tr
+                      className=""
+                    >
+                      <TableHeaderCell
+                        as="th"
+                        colSpan="7"
+                      >
+                        <TableCell
+                          as="th"
+                          className=""
+                          colSpan="7"
+                        >
+                          <th
+                            className=""
+                            colSpan="7"
+                          >
+                            <Button
+                              as="button"
+                              icon={true}
+                              labelPosition="left"
+                              onClick={[Function]}
+                              primary={true}
+                            >
+                              <Ref
+                                innerRef={
+                                  Object {
+                                    "current": <button
+                                      class="ui icon primary left labeled button"
+                                    >
+                                      <i
+                                        aria-hidden="true"
+                                        class="add icon"
+                                      />
+                                      Novo funcionário
+                                    </button>,
+                                  }
+                                }
+                              >
+                                <RefFindNode
+                                  innerRef={
+                                    Object {
+                                      "current": <button
+                                        class="ui icon primary left labeled button"
+                                      >
+                                        <i
+                                          aria-hidden="true"
+                                          class="add icon"
+                                        />
+                                        Novo funcionário
+                                      </button>,
+                                    }
+                                  }
+                                >
+                                  <button
+                                    className="ui icon primary left labeled button"
+                                    onClick={[Function]}
+                                  >
+                                    <Icon
+                                      as="i"
+                                      name="add"
+                                    >
+                                      <i
+                                        aria-hidden="true"
+                                        className="add icon"
+                                        onClick={[Function]}
+                                      />
+                                    </Icon>
+                                    Novo funcionário
+                                  </button>
+                                </RefFindNode>
+                              </Ref>
+                            </Button>
+                            <Menu
+                              floated="right"
+                              pagination={true}
+                            >
+                              <div
+                                className="ui pagination right floated menu"
+                              >
+                                <Pagination
+                                  activePage={1}
+                                  aria-label="Pagination Navigation"
+                                  boundaryRange={0}
+                                  ellipsisItem="..."
+                                  firstItem={
+                                    Object {
+                                      "aria-label": "First item",
+                                      "content": "«",
+                                    }
+                                  }
+                                  lastItem={
+                                    Object {
+                                      "aria-label": "Last item",
+                                      "content": "»",
+                                    }
+                                  }
+                                  nextItem={
+                                    Object {
+                                      "aria-label": "Next item",
+                                      "content": "⟩",
+                                    }
+                                  }
+                                  onPageChange={[Function]}
+                                  pageItem={Object {}}
+                                  prevItem={
+                                    Object {
+                                      "aria-label": "Previous item",
+                                      "content": "⟨",
+                                    }
+                                  }
+                                  siblingRange={1}
+                                  size="mini"
+                                  totalPages={1}
+                                >
+                                  <Menu
+                                    aria-label="Pagination Navigation"
+                                    pagination={true}
+                                    role="navigation"
+                                    size="mini"
+                                  >
+                                    <div
+                                      aria-label="Pagination Navigation"
+                                      className="ui mini pagination menu"
+                                      role="navigation"
+                                    >
+                                      <PaginationItem
+                                        active={false}
+                                        aria-label="First item"
+                                        content="«"
+                                        key="firstItem-1"
+                                        onClick={[Function]}
+                                        type="firstItem"
+                                        value={1}
+                                      >
+                                        <MenuItem
+                                          active={false}
+                                          aria-current={false}
+                                          aria-disabled={false}
+                                          aria-label="First item"
+                                          content="«"
+                                          onClick={[Function]}
+                                          onKeyDown={[Function]}
+                                          tabIndex={0}
+                                          type="firstItem"
+                                          value={1}
+                                        >
+                                          <a
+                                            aria-current={false}
+                                            aria-disabled={false}
+                                            aria-label="First item"
+                                            className="item"
+                                            onClick={[Function]}
+                                            onKeyDown={[Function]}
+                                            tabIndex={0}
+                                            type="firstItem"
+                                            value={1}
+                                          >
+                                            «
+                                          </a>
+                                        </MenuItem>
+                                      </PaginationItem>
+                                      <PaginationItem
+                                        active={false}
+                                        aria-label="Previous item"
+                                        content="⟨"
+                                        key="prevItem-1"
+                                        onClick={[Function]}
+                                        type="prevItem"
+                                        value={1}
+                                      >
+                                        <MenuItem
+                                          active={false}
+                                          aria-current={false}
+                                          aria-disabled={false}
+                                          aria-label="Previous item"
+                                          content="⟨"
+                                          onClick={[Function]}
+                                          onKeyDown={[Function]}
+                                          tabIndex={0}
+                                          type="prevItem"
+                                          value={1}
+                                        >
+                                          <a
+                                            aria-current={false}
+                                            aria-disabled={false}
+                                            aria-label="Previous item"
+                                            className="item"
+                                            onClick={[Function]}
+                                            onKeyDown={[Function]}
+                                            tabIndex={0}
+                                            type="prevItem"
+                                            value={1}
+                                          >
+                                            ⟨
+                                          </a>
+                                        </MenuItem>
+                                      </PaginationItem>
+                                      <PaginationItem
+                                        active={true}
+                                        content={1}
+                                        key="pageItem-1"
+                                        onClick={[Function]}
+                                        type="pageItem"
+                                        value={1}
+                                      >
+                                        <MenuItem
+                                          active={true}
+                                          aria-current={true}
+                                          aria-disabled={false}
+                                          content={1}
+                                          onClick={[Function]}
+                                          onKeyDown={[Function]}
+                                          tabIndex={0}
+                                          type="pageItem"
+                                          value={1}
+                                        >
+                                          <a
+                                            aria-current={true}
+                                            aria-disabled={false}
+                                            className="active item"
+                                            onClick={[Function]}
+                                            onKeyDown={[Function]}
+                                            tabIndex={0}
+                                            type="pageItem"
+                                            value={1}
+                                          >
+                                            1
+                                          </a>
+                                        </MenuItem>
+                                      </PaginationItem>
+                                      <PaginationItem
+                                        active={false}
+                                        aria-label="Next item"
+                                        content="⟩"
+                                        key="nextItem-1"
+                                        onClick={[Function]}
+                                        type="nextItem"
+                                        value={1}
+                                      >
+                                        <MenuItem
+                                          active={false}
+                                          aria-current={false}
+                                          aria-disabled={false}
+                                          aria-label="Next item"
+                                          content="⟩"
+                                          onClick={[Function]}
+                                          onKeyDown={[Function]}
+                                          tabIndex={0}
+                                          type="nextItem"
+                                          value={1}
+                                        >
+                                          <a
+                                            aria-current={false}
+                                            aria-disabled={false}
+                                            aria-label="Next item"
+                                            className="item"
+                                            onClick={[Function]}
+                                            onKeyDown={[Function]}
+                                            tabIndex={0}
+                                            type="nextItem"
+                                            value={1}
+                                          >
+                                            ⟩
+                                          </a>
+                                        </MenuItem>
+                                      </PaginationItem>
+                                      <PaginationItem
+                                        active={false}
+                                        aria-label="Last item"
+                                        content="»"
+                                        key="lastItem-1"
+                                        onClick={[Function]}
+                                        type="lastItem"
+                                        value={1}
+                                      >
+                                        <MenuItem
+                                          active={false}
+                                          aria-current={false}
+                                          aria-disabled={false}
+                                          aria-label="Last item"
+                                          content="»"
+                                          onClick={[Function]}
+                                          onKeyDown={[Function]}
+                                          tabIndex={0}
+                                          type="lastItem"
+                                          value={1}
+                                        >
+                                          <a
+                                            aria-current={false}
+                                            aria-disabled={false}
+                                            aria-label="Last item"
+                                            className="item"
+                                            onClick={[Function]}
+                                            onKeyDown={[Function]}
+                                            tabIndex={0}
+                                            type="lastItem"
+                                            value={1}
+                                          >
+                                            »
+                                          </a>
+                                        </MenuItem>
+                                      </PaginationItem>
+                                    </div>
+                                  </Menu>
+                                </Pagination>
+                              </div>
+                            </Menu>
+                          </th>
+                        </TableCell>
+                      </TableHeaderCell>
+                    </tr>
+                  </TableRow>
+                </tfoot>
+              </TableHeader>
+            </TableFooter>
+          </table>
+        </Table>
+      </EmployeesTable>
+    </withRouter(EmployeesTable)>
+  </Router>
+</BrowserRouter>
+`;

@@ -1,0 +1,3136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing EmployeesInfo Component should render the component correctly 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <withRouter(EmployeesInfo)>
+      <EmployeesInfo
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "createHref": [Function],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+        location={
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          }
+        }
+        match={
+          Object {
+            "isExact": true,
+            "params": Object {},
+            "path": "/",
+            "url": "/",
+          }
+        }
+      >
+        <Container>
+          <div
+            className="ui container"
+          >
+            <Segment>
+              <div
+                className="ui segment"
+              >
+                <Header
+                  as="h3"
+                >
+                  <h3
+                    className="ui header"
+                  >
+                    Cadastro de
+                     funcionário
+                  </h3>
+                </Header>
+                <Form
+                  as="form"
+                  onSubmit={[Function]}
+                >
+                  <form
+                    className="ui form"
+                    onSubmit={[Function]}
+                  >
+                    <FormGroup
+                      widths="equal"
+                    >
+                      <div
+                        className="equal width fields"
+                      >
+                        <FormInput
+                          as={[Function]}
+                          control={[Function]}
+                          fluid={true}
+                          label="Nome"
+                          name="nome"
+                          onChange={[Function]}
+                          placeholder="Fulano de Tal"
+                          value=""
+                        >
+                          <FormField
+                            control={[Function]}
+                            fluid={true}
+                            label="Nome"
+                            name="nome"
+                            onChange={[Function]}
+                            placeholder="Fulano de Tal"
+                            value=""
+                          >
+                            <div
+                              className="field"
+                            >
+                              <label>
+                                Nome
+                              </label>
+                              <Input
+                                fluid={true}
+                                name="nome"
+                                onChange={[Function]}
+                                placeholder="Fulano de Tal"
+                                type="text"
+                                value=""
+                              >
+                                <div
+                                  className="ui fluid input"
+                                >
+                                  <input
+                                    name="nome"
+                                    onChange={[Function]}
+                                    placeholder="Fulano de Tal"
+                                    type="text"
+                                    value=""
+                                  />
+                                </div>
+                              </Input>
+                            </div>
+                          </FormField>
+                        </FormInput>
+                        <FormField>
+                          <div
+                            className="field"
+                          >
+                            <label>
+                              CPF
+                            </label>
+                            <t
+                              guide={false}
+                              mask={
+                                Array [
+                                  /\\\\d/,
+                                  /\\\\d/,
+                                  /\\\\d/,
+                                  ".",
+                                  /\\\\d/,
+                                  /\\\\d/,
+                                  /\\\\d/,
+                                  ".",
+                                  /\\\\d/,
+                                  /\\\\d/,
+                                  /\\\\d/,
+                                  "-",
+                                  /\\\\d/,
+                                  /\\\\d/,
+                                ]
+                              }
+                              name="cpf"
+                              onChange={[Function]}
+                              placeholder="434.123.123-12"
+                              render={[Function]}
+                              value=""
+                            >
+                              <input
+                                defaultValue=""
+                                name="cpf"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                placeholder="434.123.123-12"
+                              />
+                            </t>
+                          </div>
+                        </FormField>
+                      </div>
+                    </FormGroup>
+                    <FormGroup
+                      widths="equal"
+                    >
+                      <div
+                        className="equal width fields"
+                      >
+                        <FormSelect
+                          as={[Function]}
+                          control={[Function]}
+                          label="UF de nascimento"
+                          name="ufNasc"
+                          onChange={[Function]}
+                          options={
+                            Array [
+                              Object {
+                                "key": 1,
+                                "text": "AC",
+                                "value": "AC",
+                              },
+                              Object {
+                                "key": 2,
+                                "text": "AL",
+                                "value": "AL",
+                              },
+                              Object {
+                                "key": 3,
+                                "text": "AP",
+                                "value": "AP",
+                              },
+                              Object {
+                                "key": 4,
+                                "text": "AM",
+                                "value": "AM",
+                              },
+                              Object {
+                                "key": 5,
+                                "text": "BA",
+                                "value": "BA",
+                              },
+                              Object {
+                                "key": 6,
+                                "text": "CE",
+                                "value": "CE",
+                              },
+                              Object {
+                                "key": 7,
+                                "text": "DF",
+                                "value": "DF",
+                              },
+                              Object {
+                                "key": 8,
+                                "text": "ES",
+                                "value": "ES",
+                              },
+                              Object {
+                                "key": 9,
+                                "text": "GO",
+                                "value": "GO",
+                              },
+                              Object {
+                                "key": 10,
+                                "text": "MA",
+                                "value": "MA",
+                              },
+                              Object {
+                                "key": 11,
+                                "text": "MT",
+                                "value": "MT",
+                              },
+                              Object {
+                                "key": 12,
+                                "text": "MS",
+                                "value": "MS",
+                              },
+                              Object {
+                                "key": 13,
+                                "text": "MG",
+                                "value": "MG",
+                              },
+                              Object {
+                                "key": 14,
+                                "text": "PA",
+                                "value": "PA",
+                              },
+                              Object {
+                                "key": 15,
+                                "text": "PB",
+                                "value": "PB",
+                              },
+                              Object {
+                                "key": 16,
+                                "text": "PR",
+                                "value": "PR",
+                              },
+                              Object {
+                                "key": 17,
+                                "text": "PE",
+                                "value": "PE",
+                              },
+                              Object {
+                                "key": 18,
+                                "text": "PI",
+                                "value": "PI",
+                              },
+                              Object {
+                                "key": 19,
+                                "text": "RJ",
+                                "value": "RJ",
+                              },
+                              Object {
+                                "key": 20,
+                                "text": "RN",
+                                "value": "RN",
+                              },
+                              Object {
+                                "key": 21,
+                                "text": "RS",
+                                "value": "RS",
+                              },
+                              Object {
+                                "key": 22,
+                                "text": "RO",
+                                "value": "RO",
+                              },
+                              Object {
+                                "key": 23,
+                                "text": "RR",
+                                "value": "RR",
+                              },
+                              Object {
+                                "key": 24,
+                                "text": "SC",
+                                "value": "SC",
+                              },
+                              Object {
+                                "key": 25,
+                                "text": "SP",
+                                "value": "SP",
+                              },
+                              Object {
+                                "key": 26,
+                                "text": "SE",
+                                "value": "SE",
+                              },
+                              Object {
+                                "key": 27,
+                                "text": "TO",
+                                "value": "TO",
+                              },
+                            ]
+                          }
+                          placeholder="Selecione..."
+                          value=""
+                        >
+                          <FormField
+                            control={[Function]}
+                            label="UF de nascimento"
+                            name="ufNasc"
+                            onChange={[Function]}
+                            options={
+                              Array [
+                                Object {
+                                  "key": 1,
+                                  "text": "AC",
+                                  "value": "AC",
+                                },
+                                Object {
+                                  "key": 2,
+                                  "text": "AL",
+                                  "value": "AL",
+                                },
+                                Object {
+                                  "key": 3,
+                                  "text": "AP",
+                                  "value": "AP",
+                                },
+                                Object {
+                                  "key": 4,
+                                  "text": "AM",
+                                  "value": "AM",
+                                },
+                                Object {
+                                  "key": 5,
+                                  "text": "BA",
+                                  "value": "BA",
+                                },
+                                Object {
+                                  "key": 6,
+                                  "text": "CE",
+                                  "value": "CE",
+                                },
+                                Object {
+                                  "key": 7,
+                                  "text": "DF",
+                                  "value": "DF",
+                                },
+                                Object {
+                                  "key": 8,
+                                  "text": "ES",
+                                  "value": "ES",
+                                },
+                                Object {
+                                  "key": 9,
+                                  "text": "GO",
+                                  "value": "GO",
+                                },
+                                Object {
+                                  "key": 10,
+                                  "text": "MA",
+                                  "value": "MA",
+                                },
+                                Object {
+                                  "key": 11,
+                                  "text": "MT",
+                                  "value": "MT",
+                                },
+                                Object {
+                                  "key": 12,
+                                  "text": "MS",
+                                  "value": "MS",
+                                },
+                                Object {
+                                  "key": 13,
+                                  "text": "MG",
+                                  "value": "MG",
+                                },
+                                Object {
+                                  "key": 14,
+                                  "text": "PA",
+                                  "value": "PA",
+                                },
+                                Object {
+                                  "key": 15,
+                                  "text": "PB",
+                                  "value": "PB",
+                                },
+                                Object {
+                                  "key": 16,
+                                  "text": "PR",
+                                  "value": "PR",
+                                },
+                                Object {
+                                  "key": 17,
+                                  "text": "PE",
+                                  "value": "PE",
+                                },
+                                Object {
+                                  "key": 18,
+                                  "text": "PI",
+                                  "value": "PI",
+                                },
+                                Object {
+                                  "key": 19,
+                                  "text": "RJ",
+                                  "value": "RJ",
+                                },
+                                Object {
+                                  "key": 20,
+                                  "text": "RN",
+                                  "value": "RN",
+                                },
+                                Object {
+                                  "key": 21,
+                                  "text": "RS",
+                                  "value": "RS",
+                                },
+                                Object {
+                                  "key": 22,
+                                  "text": "RO",
+                                  "value": "RO",
+                                },
+                                Object {
+                                  "key": 23,
+                                  "text": "RR",
+                                  "value": "RR",
+                                },
+                                Object {
+                                  "key": 24,
+                                  "text": "SC",
+                                  "value": "SC",
+                                },
+                                Object {
+                                  "key": 25,
+                                  "text": "SP",
+                                  "value": "SP",
+                                },
+                                Object {
+                                  "key": 26,
+                                  "text": "SE",
+                                  "value": "SE",
+                                },
+                                Object {
+                                  "key": 27,
+                                  "text": "TO",
+                                  "value": "TO",
+                                },
+                              ]
+                            }
+                            placeholder="Selecione..."
+                            value=""
+                          >
+                            <div
+                              className="field"
+                            >
+                              <label>
+                                UF de nascimento
+                              </label>
+                              <Select
+                                name="ufNasc"
+                                onChange={[Function]}
+                                options={
+                                  Array [
+                                    Object {
+                                      "key": 1,
+                                      "text": "AC",
+                                      "value": "AC",
+                                    },
+                                    Object {
+                                      "key": 2,
+                                      "text": "AL",
+                                      "value": "AL",
+                                    },
+                                    Object {
+                                      "key": 3,
+                                      "text": "AP",
+                                      "value": "AP",
+                                    },
+                                    Object {
+                                      "key": 4,
+                                      "text": "AM",
+                                      "value": "AM",
+                                    },
+                                    Object {
+                                      "key": 5,
+                                      "text": "BA",
+                                      "value": "BA",
+                                    },
+                                    Object {
+                                      "key": 6,
+                                      "text": "CE",
+                                      "value": "CE",
+                                    },
+                                    Object {
+                                      "key": 7,
+                                      "text": "DF",
+                                      "value": "DF",
+                                    },
+                                    Object {
+                                      "key": 8,
+                                      "text": "ES",
+                                      "value": "ES",
+                                    },
+                                    Object {
+                                      "key": 9,
+                                      "text": "GO",
+                                      "value": "GO",
+                                    },
+                                    Object {
+                                      "key": 10,
+                                      "text": "MA",
+                                      "value": "MA",
+                                    },
+                                    Object {
+                                      "key": 11,
+                                      "text": "MT",
+                                      "value": "MT",
+                                    },
+                                    Object {
+                                      "key": 12,
+                                      "text": "MS",
+                                      "value": "MS",
+                                    },
+                                    Object {
+                                      "key": 13,
+                                      "text": "MG",
+                                      "value": "MG",
+                                    },
+                                    Object {
+                                      "key": 14,
+                                      "text": "PA",
+                                      "value": "PA",
+                                    },
+                                    Object {
+                                      "key": 15,
+                                      "text": "PB",
+                                      "value": "PB",
+                                    },
+                                    Object {
+                                      "key": 16,
+                                      "text": "PR",
+                                      "value": "PR",
+                                    },
+                                    Object {
+                                      "key": 17,
+                                      "text": "PE",
+                                      "value": "PE",
+                                    },
+                                    Object {
+                                      "key": 18,
+                                      "text": "PI",
+                                      "value": "PI",
+                                    },
+                                    Object {
+                                      "key": 19,
+                                      "text": "RJ",
+                                      "value": "RJ",
+                                    },
+                                    Object {
+                                      "key": 20,
+                                      "text": "RN",
+                                      "value": "RN",
+                                    },
+                                    Object {
+                                      "key": 21,
+                                      "text": "RS",
+                                      "value": "RS",
+                                    },
+                                    Object {
+                                      "key": 22,
+                                      "text": "RO",
+                                      "value": "RO",
+                                    },
+                                    Object {
+                                      "key": 23,
+                                      "text": "RR",
+                                      "value": "RR",
+                                    },
+                                    Object {
+                                      "key": 24,
+                                      "text": "SC",
+                                      "value": "SC",
+                                    },
+                                    Object {
+                                      "key": 25,
+                                      "text": "SP",
+                                      "value": "SP",
+                                    },
+                                    Object {
+                                      "key": 26,
+                                      "text": "SE",
+                                      "value": "SE",
+                                    },
+                                    Object {
+                                      "key": 27,
+                                      "text": "TO",
+                                      "value": "TO",
+                                    },
+                                  ]
+                                }
+                                placeholder="Selecione..."
+                                value=""
+                              >
+                                <Dropdown
+                                  additionLabel="Add "
+                                  additionPosition="top"
+                                  closeOnBlur={true}
+                                  closeOnEscape={true}
+                                  deburr={false}
+                                  icon="dropdown"
+                                  minCharacters={1}
+                                  name="ufNasc"
+                                  noResultsMessage="No results found."
+                                  onChange={[Function]}
+                                  openOnFocus={true}
+                                  options={
+                                    Array [
+                                      Object {
+                                        "key": 1,
+                                        "text": "AC",
+                                        "value": "AC",
+                                      },
+                                      Object {
+                                        "key": 2,
+                                        "text": "AL",
+                                        "value": "AL",
+                                      },
+                                      Object {
+                                        "key": 3,
+                                        "text": "AP",
+                                        "value": "AP",
+                                      },
+                                      Object {
+                                        "key": 4,
+                                        "text": "AM",
+                                        "value": "AM",
+                                      },
+                                      Object {
+                                        "key": 5,
+                                        "text": "BA",
+                                        "value": "BA",
+                                      },
+                                      Object {
+                                        "key": 6,
+                                        "text": "CE",
+                                        "value": "CE",
+                                      },
+                                      Object {
+                                        "key": 7,
+                                        "text": "DF",
+                                        "value": "DF",
+                                      },
+                                      Object {
+                                        "key": 8,
+                                        "text": "ES",
+                                        "value": "ES",
+                                      },
+                                      Object {
+                                        "key": 9,
+                                        "text": "GO",
+                                        "value": "GO",
+                                      },
+                                      Object {
+                                        "key": 10,
+                                        "text": "MA",
+                                        "value": "MA",
+                                      },
+                                      Object {
+                                        "key": 11,
+                                        "text": "MT",
+                                        "value": "MT",
+                                      },
+                                      Object {
+                                        "key": 12,
+                                        "text": "MS",
+                                        "value": "MS",
+                                      },
+                                      Object {
+                                        "key": 13,
+                                        "text": "MG",
+                                        "value": "MG",
+                                      },
+                                      Object {
+                                        "key": 14,
+                                        "text": "PA",
+                                        "value": "PA",
+                                      },
+                                      Object {
+                                        "key": 15,
+                                        "text": "PB",
+                                        "value": "PB",
+                                      },
+                                      Object {
+                                        "key": 16,
+                                        "text": "PR",
+                                        "value": "PR",
+                                      },
+                                      Object {
+                                        "key": 17,
+                                        "text": "PE",
+                                        "value": "PE",
+                                      },
+                                      Object {
+                                        "key": 18,
+                                        "text": "PI",
+                                        "value": "PI",
+                                      },
+                                      Object {
+                                        "key": 19,
+                                        "text": "RJ",
+                                        "value": "RJ",
+                                      },
+                                      Object {
+                                        "key": 20,
+                                        "text": "RN",
+                                        "value": "RN",
+                                      },
+                                      Object {
+                                        "key": 21,
+                                        "text": "RS",
+                                        "value": "RS",
+                                      },
+                                      Object {
+                                        "key": 22,
+                                        "text": "RO",
+                                        "value": "RO",
+                                      },
+                                      Object {
+                                        "key": 23,
+                                        "text": "RR",
+                                        "value": "RR",
+                                      },
+                                      Object {
+                                        "key": 24,
+                                        "text": "SC",
+                                        "value": "SC",
+                                      },
+                                      Object {
+                                        "key": 25,
+                                        "text": "SP",
+                                        "value": "SP",
+                                      },
+                                      Object {
+                                        "key": 26,
+                                        "text": "SE",
+                                        "value": "SE",
+                                      },
+                                      Object {
+                                        "key": 27,
+                                        "text": "TO",
+                                        "value": "TO",
+                                      },
+                                    ]
+                                  }
+                                  placeholder="Selecione..."
+                                  renderLabel={[Function]}
+                                  searchInput="text"
+                                  selectOnBlur={true}
+                                  selectOnNavigation={true}
+                                  selection={true}
+                                  value=""
+                                  wrapSelection={true}
+                                >
+                                  <Ref
+                                    innerRef={
+                                      Object {
+                                        "current": <div
+                                          aria-expanded="false"
+                                          class="ui selection dropdown"
+                                          name="ufNasc"
+                                          role="listbox"
+                                          tabindex="0"
+                                        >
+                                          <div
+                                            aria-atomic="true"
+                                            aria-live="polite"
+                                            class="default text"
+                                            role="alert"
+                                          >
+                                            Selecione...
+                                          </div>
+                                          <i
+                                            aria-hidden="true"
+                                            class="dropdown icon"
+                                          />
+                                          <div
+                                            class="menu transition"
+                                          >
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="true"
+                                              class="selected item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                AC
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                AL
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                AP
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                AM
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                BA
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                CE
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                DF
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                ES
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                GO
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                MA
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                MT
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                MS
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                MG
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                PA
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                PB
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                PR
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                PE
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                PI
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                RJ
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                RN
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                RS
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                RO
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                RR
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                SC
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                SP
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                SE
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                TO
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>,
+                                      }
+                                    }
+                                  >
+                                    <RefFindNode
+                                      innerRef={
+                                        Object {
+                                          "current": <div
+                                            aria-expanded="false"
+                                            class="ui selection dropdown"
+                                            name="ufNasc"
+                                            role="listbox"
+                                            tabindex="0"
+                                          >
+                                            <div
+                                              aria-atomic="true"
+                                              aria-live="polite"
+                                              class="default text"
+                                              role="alert"
+                                            >
+                                              Selecione...
+                                            </div>
+                                            <i
+                                              aria-hidden="true"
+                                              class="dropdown icon"
+                                            />
+                                            <div
+                                              class="menu transition"
+                                            >
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="true"
+                                                class="selected item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  AC
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  AL
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  AP
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  AM
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  BA
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  CE
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  DF
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  ES
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  GO
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  MA
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  MT
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  MS
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  MG
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  PA
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  PB
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  PR
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  PE
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  PI
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  RJ
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  RN
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  RS
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  RO
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  RR
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  SC
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  SP
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  SE
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  TO
+                                                </span>
+                                              </div>
+                                            </div>
+                                          </div>,
+                                        }
+                                      }
+                                    >
+                                      <div
+                                        aria-expanded={false}
+                                        className="ui selection dropdown"
+                                        name="ufNasc"
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onClick={[Function]}
+                                        onFocus={[Function]}
+                                        onMouseDown={[Function]}
+                                        role="listbox"
+                                        tabIndex={0}
+                                      >
+                                        <div
+                                          aria-atomic={true}
+                                          aria-live="polite"
+                                          className="default text"
+                                          role="alert"
+                                        >
+                                          Selecione...
+                                        </div>
+                                        <Icon
+                                          as="i"
+                                          className=""
+                                          name="dropdown"
+                                          onClick={[Function]}
+                                        >
+                                          <i
+                                            aria-hidden="true"
+                                            className="dropdown icon"
+                                            onClick={[Function]}
+                                          />
+                                        </Icon>
+                                        <DropdownMenu>
+                                          <div
+                                            className="menu transition"
+                                          >
+                                            <DropdownItem
+                                              active={false}
+                                              key="1"
+                                              onClick={[Function]}
+                                              selected={true}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="AC"
+                                              value="AC"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={true}
+                                                className="selected item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  AC
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="2"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="AL"
+                                              value="AL"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  AL
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="3"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="AP"
+                                              value="AP"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  AP
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="4"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="AM"
+                                              value="AM"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  AM
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="5"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="BA"
+                                              value="BA"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  BA
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="6"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="CE"
+                                              value="CE"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  CE
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="7"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="DF"
+                                              value="DF"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  DF
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="8"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="ES"
+                                              value="ES"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  ES
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="9"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="GO"
+                                              value="GO"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  GO
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="10"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="MA"
+                                              value="MA"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  MA
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="11"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="MT"
+                                              value="MT"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  MT
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="12"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="MS"
+                                              value="MS"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  MS
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="13"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="MG"
+                                              value="MG"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  MG
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="14"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="PA"
+                                              value="PA"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  PA
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="15"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="PB"
+                                              value="PB"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  PB
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="16"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="PR"
+                                              value="PR"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  PR
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="17"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="PE"
+                                              value="PE"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  PE
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="18"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="PI"
+                                              value="PI"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  PI
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="19"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="RJ"
+                                              value="RJ"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  RJ
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="20"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="RN"
+                                              value="RN"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  RN
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="21"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="RS"
+                                              value="RS"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  RS
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="22"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="RO"
+                                              value="RO"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  RO
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="23"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="RR"
+                                              value="RR"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  RR
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="24"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="SC"
+                                              value="SC"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  SC
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="25"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="SP"
+                                              value="SP"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  SP
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="26"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="SE"
+                                              value="SE"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  SE
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="27"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="TO"
+                                              value="TO"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  TO
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                          </div>
+                                        </DropdownMenu>
+                                      </div>
+                                    </RefFindNode>
+                                  </Ref>
+                                </Dropdown>
+                              </Select>
+                            </div>
+                          </FormField>
+                        </FormSelect>
+                        <FormSelect
+                          as={[Function]}
+                          control={[Function]}
+                          label="Status"
+                          name="status"
+                          onChange={[Function]}
+                          options={
+                            Array [
+                              Object {
+                                "key": 1,
+                                "text": "",
+                                "value": "",
+                              },
+                              Object {
+                                "key": 2,
+                                "text": "Ativo",
+                                "value": "ATIVO",
+                              },
+                              Object {
+                                "key": 3,
+                                "text": "Bloqueado",
+                                "value": "BLOQUEADO",
+                              },
+                              Object {
+                                "key": 4,
+                                "text": "Inativo",
+                                "value": "INATIVO",
+                              },
+                            ]
+                          }
+                          placeholder="Selecione..."
+                          value=""
+                        >
+                          <FormField
+                            control={[Function]}
+                            label="Status"
+                            name="status"
+                            onChange={[Function]}
+                            options={
+                              Array [
+                                Object {
+                                  "key": 1,
+                                  "text": "",
+                                  "value": "",
+                                },
+                                Object {
+                                  "key": 2,
+                                  "text": "Ativo",
+                                  "value": "ATIVO",
+                                },
+                                Object {
+                                  "key": 3,
+                                  "text": "Bloqueado",
+                                  "value": "BLOQUEADO",
+                                },
+                                Object {
+                                  "key": 4,
+                                  "text": "Inativo",
+                                  "value": "INATIVO",
+                                },
+                              ]
+                            }
+                            placeholder="Selecione..."
+                            value=""
+                          >
+                            <div
+                              className="field"
+                            >
+                              <label>
+                                Status
+                              </label>
+                              <Select
+                                name="status"
+                                onChange={[Function]}
+                                options={
+                                  Array [
+                                    Object {
+                                      "key": 1,
+                                      "text": "",
+                                      "value": "",
+                                    },
+                                    Object {
+                                      "key": 2,
+                                      "text": "Ativo",
+                                      "value": "ATIVO",
+                                    },
+                                    Object {
+                                      "key": 3,
+                                      "text": "Bloqueado",
+                                      "value": "BLOQUEADO",
+                                    },
+                                    Object {
+                                      "key": 4,
+                                      "text": "Inativo",
+                                      "value": "INATIVO",
+                                    },
+                                  ]
+                                }
+                                placeholder="Selecione..."
+                                value=""
+                              >
+                                <Dropdown
+                                  additionLabel="Add "
+                                  additionPosition="top"
+                                  closeOnBlur={true}
+                                  closeOnEscape={true}
+                                  deburr={false}
+                                  icon="dropdown"
+                                  minCharacters={1}
+                                  name="status"
+                                  noResultsMessage="No results found."
+                                  onChange={[Function]}
+                                  openOnFocus={true}
+                                  options={
+                                    Array [
+                                      Object {
+                                        "key": 1,
+                                        "text": "",
+                                        "value": "",
+                                      },
+                                      Object {
+                                        "key": 2,
+                                        "text": "Ativo",
+                                        "value": "ATIVO",
+                                      },
+                                      Object {
+                                        "key": 3,
+                                        "text": "Bloqueado",
+                                        "value": "BLOQUEADO",
+                                      },
+                                      Object {
+                                        "key": 4,
+                                        "text": "Inativo",
+                                        "value": "INATIVO",
+                                      },
+                                    ]
+                                  }
+                                  placeholder="Selecione..."
+                                  renderLabel={[Function]}
+                                  searchInput="text"
+                                  selectOnBlur={true}
+                                  selectOnNavigation={true}
+                                  selection={true}
+                                  value=""
+                                  wrapSelection={true}
+                                >
+                                  <Ref
+                                    innerRef={
+                                      Object {
+                                        "current": <div
+                                          aria-expanded="false"
+                                          class="ui selection dropdown"
+                                          name="status"
+                                          role="listbox"
+                                          tabindex="0"
+                                        >
+                                          <div
+                                            aria-atomic="true"
+                                            aria-live="polite"
+                                            class="default text"
+                                            role="alert"
+                                          >
+                                            Selecione...
+                                          </div>
+                                          <i
+                                            aria-hidden="true"
+                                            class="dropdown icon"
+                                          />
+                                          <div
+                                            class="menu transition"
+                                          >
+                                            <div
+                                              aria-checked="true"
+                                              aria-selected="true"
+                                              class="active selected item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              />
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                Ativo
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                Bloqueado
+                                              </span>
+                                            </div>
+                                            <div
+                                              aria-checked="false"
+                                              aria-selected="false"
+                                              class="item"
+                                              role="option"
+                                              style="pointer-events: all;"
+                                            >
+                                              <span
+                                                class="text"
+                                              >
+                                                Inativo
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>,
+                                      }
+                                    }
+                                  >
+                                    <RefFindNode
+                                      innerRef={
+                                        Object {
+                                          "current": <div
+                                            aria-expanded="false"
+                                            class="ui selection dropdown"
+                                            name="status"
+                                            role="listbox"
+                                            tabindex="0"
+                                          >
+                                            <div
+                                              aria-atomic="true"
+                                              aria-live="polite"
+                                              class="default text"
+                                              role="alert"
+                                            >
+                                              Selecione...
+                                            </div>
+                                            <i
+                                              aria-hidden="true"
+                                              class="dropdown icon"
+                                            />
+                                            <div
+                                              class="menu transition"
+                                            >
+                                              <div
+                                                aria-checked="true"
+                                                aria-selected="true"
+                                                class="active selected item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                />
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  Ativo
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  Bloqueado
+                                                </span>
+                                              </div>
+                                              <div
+                                                aria-checked="false"
+                                                aria-selected="false"
+                                                class="item"
+                                                role="option"
+                                                style="pointer-events: all;"
+                                              >
+                                                <span
+                                                  class="text"
+                                                >
+                                                  Inativo
+                                                </span>
+                                              </div>
+                                            </div>
+                                          </div>,
+                                        }
+                                      }
+                                    >
+                                      <div
+                                        aria-expanded={false}
+                                        className="ui selection dropdown"
+                                        name="status"
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onClick={[Function]}
+                                        onFocus={[Function]}
+                                        onMouseDown={[Function]}
+                                        role="listbox"
+                                        tabIndex={0}
+                                      >
+                                        <div
+                                          aria-atomic={true}
+                                          aria-live="polite"
+                                          className="default text"
+                                          role="alert"
+                                        >
+                                          Selecione...
+                                        </div>
+                                        <Icon
+                                          as="i"
+                                          className=""
+                                          name="dropdown"
+                                          onClick={[Function]}
+                                        >
+                                          <i
+                                            aria-hidden="true"
+                                            className="dropdown icon"
+                                            onClick={[Function]}
+                                          />
+                                        </Icon>
+                                        <DropdownMenu>
+                                          <div
+                                            className="menu transition"
+                                          >
+                                            <DropdownItem
+                                              active={true}
+                                              key="1"
+                                              onClick={[Function]}
+                                              selected={true}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text=""
+                                              value=""
+                                            >
+                                              <div
+                                                aria-checked={true}
+                                                aria-selected={true}
+                                                className="active selected item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                />
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="2"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="Ativo"
+                                              value="ATIVO"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  Ativo
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="3"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="Bloqueado"
+                                              value="BLOQUEADO"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  Bloqueado
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                            <DropdownItem
+                                              active={false}
+                                              key="4"
+                                              onClick={[Function]}
+                                              selected={false}
+                                              style={
+                                                Object {
+                                                  "pointerEvents": "all",
+                                                }
+                                              }
+                                              text="Inativo"
+                                              value="INATIVO"
+                                            >
+                                              <div
+                                                aria-checked={false}
+                                                aria-selected={false}
+                                                className="item"
+                                                onClick={[Function]}
+                                                role="option"
+                                                style={
+                                                  Object {
+                                                    "pointerEvents": "all",
+                                                  }
+                                                }
+                                              >
+                                                <span
+                                                  className="text"
+                                                >
+                                                  Inativo
+                                                </span>
+                                              </div>
+                                            </DropdownItem>
+                                          </div>
+                                        </DropdownMenu>
+                                      </div>
+                                    </RefFindNode>
+                                  </Ref>
+                                </Dropdown>
+                              </Select>
+                            </div>
+                          </FormField>
+                        </FormSelect>
+                      </div>
+                    </FormGroup>
+                    <FormGroup
+                      widths="equal"
+                    >
+                      <div
+                        className="equal width fields"
+                      >
+                        <FormInput
+                          as={[Function]}
+                          control={[Function]}
+                          fluid={true}
+                          label="Cargo"
+                          name="cargo"
+                          onChange={[Function]}
+                          placeholder="Dev Pl"
+                          value=""
+                        >
+                          <FormField
+                            control={[Function]}
+                            fluid={true}
+                            label="Cargo"
+                            name="cargo"
+                            onChange={[Function]}
+                            placeholder="Dev Pl"
+                            value=""
+                          >
+                            <div
+                              className="field"
+                            >
+                              <label>
+                                Cargo
+                              </label>
+                              <Input
+                                fluid={true}
+                                name="cargo"
+                                onChange={[Function]}
+                                placeholder="Dev Pl"
+                                type="text"
+                                value=""
+                              >
+                                <div
+                                  className="ui fluid input"
+                                >
+                                  <input
+                                    name="cargo"
+                                    onChange={[Function]}
+                                    placeholder="Dev Pl"
+                                    type="text"
+                                    value=""
+                                  />
+                                </div>
+                              </Input>
+                            </div>
+                          </FormField>
+                        </FormInput>
+                        <FormField>
+                          <div
+                            className="field"
+                          >
+                            <label>
+                              Salário
+                            </label>
+                            <t
+                              guide={false}
+                              mask={[Function]}
+                              name="salario"
+                              onChange={[Function]}
+                              placeholder="1000,00"
+                              render={[Function]}
+                              value=""
+                            >
+                              <input
+                                defaultValue=""
+                                name="salario"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                placeholder="1000,00"
+                              />
+                            </t>
+                          </div>
+                        </FormField>
+                      </div>
+                    </FormGroup>
+                    <Button
+                      as="button"
+                      icon={true}
+                      labelPosition="left"
+                      positive={true}
+                      type="submit"
+                    >
+                      <Ref
+                        innerRef={
+                          Object {
+                            "current": <button
+                              class="ui icon positive left labeled button"
+                              type="submit"
+                            >
+                              <i
+                                aria-hidden="true"
+                                class="check icon"
+                              />
+                              Salvar
+                            </button>,
+                          }
+                        }
+                      >
+                        <RefFindNode
+                          innerRef={
+                            Object {
+                              "current": <button
+                                class="ui icon positive left labeled button"
+                                type="submit"
+                              >
+                                <i
+                                  aria-hidden="true"
+                                  class="check icon"
+                                />
+                                Salvar
+                              </button>,
+                            }
+                          }
+                        >
+                          <button
+                            className="ui icon positive left labeled button"
+                            onClick={[Function]}
+                            type="submit"
+                          >
+                            <Icon
+                              as="i"
+                              name="check"
+                            >
+                              <i
+                                aria-hidden="true"
+                                className="check icon"
+                                onClick={[Function]}
+                              />
+                            </Icon>
+                            Salvar
+                          </button>
+                        </RefFindNode>
+                      </Ref>
+                    </Button>
+                  </form>
+                </Form>
+              </div>
+            </Segment>
+          </div>
+        </Container>
+        <Confirm
+          cancelButton="Cancelar"
+          confirmButton="Excluir"
+          content="Deseja mesmo excluir o funcionário?"
+          onCancel={[Function]}
+          onConfirm={[Function]}
+          size="small"
+        >
+          <Modal
+            centered={true}
+            closeOnDimmerClick={true}
+            closeOnDocumentClick={false}
+            dimmer={true}
+            eventPool="Modal"
+            onClose={[Function]}
+            size="small"
+          >
+            <Portal
+              closeOnDocumentClick={false}
+              closeOnEscape={true}
+              eventPool="Modal"
+              mountNode={<body />}
+              onClose={[Function]}
+              onMount={[Function]}
+              onOpen={[Function]}
+              onUnmount={[Function]}
+              openOnTriggerClick={true}
+            />
+          </Modal>
+        </Confirm>
+      </EmployeesInfo>
+    </withRouter(EmployeesInfo)>
+  </Router>
+</BrowserRouter>
+`;
