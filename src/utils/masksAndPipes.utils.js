@@ -7,6 +7,23 @@ export const moneyMask = createNumberMask({
   decimalSymbol: ',',
 });
 
+export const cpfMask = [
+  /\d/,
+  /\d/,
+  /\d/,
+  '.',
+  /\d/,
+  /\d/,
+  /\d/,
+  '.',
+  /\d/,
+  /\d/,
+  /\d/,
+  '-',
+  /\d/,
+  /\d/,
+];
+
 export const PipeCpf = (value) => {
   const cpfValue = value.padStart(11, '0');
   return cpfValue.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
@@ -24,20 +41,3 @@ export const PipeMoney = (value) => {
 
   return `R$ ${splittedValue[0]},${splittedValue[1]}`;
 };
-
-export const cpfMask = [
-  /\d/,
-  /\d/,
-  /\d/,
-  '.',
-  /\d/,
-  /\d/,
-  /\d/,
-  '.',
-  /\d/,
-  /\d/,
-  /\d/,
-  '-',
-  /\d/,
-  /\d/,
-];

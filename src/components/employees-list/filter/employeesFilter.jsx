@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button, Form, Message, Icon } from 'semantic-ui-react';
 import MaskedInput from 'react-text-mask';
 import { moneyMask, cpfMask } from '../../../utils/masksAndPipes.utils';
-import { validate, prepareData } from './employeefilterValidation';
+import { validate, prepareData } from './employeesFilterValidation';
 import { statusList } from '../../../utils/constants.utils';
 
 export default class EmployeesFilter extends Component {

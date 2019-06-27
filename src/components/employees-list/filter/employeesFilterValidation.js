@@ -41,7 +41,7 @@ export const validate = async (data) => {
   };
 };
 
-const formatDate = (date) => {
+export const formatDate = (date) => {
   if (date) {
     return date
       .split('/')

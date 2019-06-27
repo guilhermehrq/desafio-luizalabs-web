@@ -14,7 +14,7 @@ import {
 import { withRouter } from 'react-router-dom';
 import { statusList, ufList } from '../../utils/constants.utils';
 import { moneyMask, cpfMask, PipeCpf, PipeMoney } from '../../utils/masksAndPipes.utils';
-import { validate } from './employeeInfoValidation';
+import { validate } from './employeesInfoValidation';
 import { toast } from 'react-toastify';
 
 import { API_URL } from '../../utils/constants.utils';
