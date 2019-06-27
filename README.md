@@ -16,7 +16,7 @@ Frontend desenvolvido para consumo dos serviços disponibilizados pela [API de D
 - [A aplicação](#id1)
 - [Demo](#id2)
 - [Executando a aplicação](#id3)
-  - [Configurando váriaveis de ambiente](#id4)
+  - [Configurando variáveis de ambiente](#id4)
   - [Iniciando a aplicação](#id5)
 - [Testes automatizados](#id6)
 
@@ -57,6 +57,7 @@ $ npm install
 <div id='id4' />
 
 **Configurando variáveis de ambiente**
+
 Em seguida, abra o arquivo _.env_ e configure a variável de ambiente com a rota base para requisições na API:
 
 ```js
