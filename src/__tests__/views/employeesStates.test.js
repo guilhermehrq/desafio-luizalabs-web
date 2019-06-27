@@ -28,6 +28,6 @@ describe('Testing EmployeesStates Component', () => {
         .find('TableCell td')
         .at(0)
         .text(),
-    ).toBe('Nenhuma UF encontrada...');
+    ).toBe('Nenhum funcionário encontrado...');
   });
 });

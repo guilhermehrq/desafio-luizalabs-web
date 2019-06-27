@@ -88,7 +88,7 @@ exports[`Testing EmployeesStates Component should render menu correctly 1`] = `
                   <h4
                     className="ui header"
                   >
-                    Lista de UFs e a quantidade de funcionários em cada um
+                    Lista de UFs e a quantidade de funcionários nascidos em cada uma
                   </h4>
                 </Header>
                 <Table
@@ -175,7 +175,7 @@ exports[`Testing EmployeesStates Component should render menu correctly 1`] = `
                                 className=""
                                 colSpan="2"
                               >
-                                Nenhuma UF encontrada...
+                                Nenhum funcionário encontrado...
                               </td>
                             </TableCell>
                           </tr>

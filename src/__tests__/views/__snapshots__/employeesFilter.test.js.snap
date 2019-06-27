@@ -116,7 +116,7 @@ exports[`Testing EmployeesFilter Component should render the component correctly
                     }
                     name="cpf"
                     onChange={[Function]}
-                    placeholder="434.123.123-12"
+                    placeholder="123.456.789-09"
                     render={[Function]}
                     value=""
                   >
@@ -125,7 +125,7 @@ exports[`Testing EmployeesFilter Component should render the component correctly
                       name="cpf"
                       onBlur={[Function]}
                       onChange={[Function]}
-                      placeholder="434.123.123-12"
+                      placeholder="123.456.789-09"
                     />
                   </t>
                 </div>
