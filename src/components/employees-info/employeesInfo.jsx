@@ -17,7 +17,7 @@ import { moneyMask, cpfMask, PipeCpf, PipeMoney } from '../../utils/masksAndPipe
 import { validate } from './employeesInfoValidation';
 import { toast } from 'react-toastify';
 
-import { API_URL } from '../../utils/constants.utils';
+import { BASE_URL } from '../../utils/constants.utils';
 
 class EmployeesInfo extends Component {
   constructor(props) {
@@ -73,7 +73,7 @@ class EmployeesInfo extends Component {
     try {
       const response = await axios.request({
         method: 'GET',
-        baseURL: API_URL,
+        baseURL: BASE_URL,
         url: `/employee/${employeeId}`,
       });
 
@@ -115,7 +115,7 @@ class EmployeesInfo extends Component {
       if (!employeeId) {
         await axios.request({
           method: 'POST',
-          baseURL: API_URL,
+          baseURL: BASE_URL,
           url: '/employee',
           data: employee,
         });
@@ -124,7 +124,7 @@ class EmployeesInfo extends Component {
       } else {
         await axios.request({
           method: 'PUT',
-          baseURL: API_URL,
+          baseURL: BASE_URL,
           url: `/employee/${employee.cpf}`,
           data: employee,
         });
@@ -146,7 +146,7 @@ class EmployeesInfo extends Component {
 
       await axios.request({
         method: 'DELETE',
-        baseURL: API_URL,
+        baseURL: BASE_URL,
         url: `/employee/${employee.cpf}`,
       });
 

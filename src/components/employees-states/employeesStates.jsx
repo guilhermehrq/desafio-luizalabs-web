@@ -4,7 +4,7 @@ import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-import { API_URL } from '../../utils/constants.utils';
+import { BASE_URL } from '../../utils/constants.utils';
 
 class EmployeesStates extends Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class EmployeesStates extends Component {
     try {
       const response = await axios.request({
         method: 'GET',
-        baseURL: API_URL,
+        baseURL: BASE_URL,
         url: '/employee-states',
       });
 

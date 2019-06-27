@@ -1,4 +1,4 @@
-export const API_URL = process.env.API_URL || 'http://localhost:3001';
+export const BASE_URL = process.env.REACT_APP_API_URL;
 
 export const ufList = [
   { key: 1, text: 'AC', value: 'AC' },
