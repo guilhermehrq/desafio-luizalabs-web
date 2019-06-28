@@ -79,6 +79,8 @@ $ npm start
 
 E pronto! Seu navegador padrão será aberto com a aplicação em funcionamento.
 
+A aplicação estará disponível através da rota: http://localhost:3000
+
 <div id='id6' />
 
 ## Testes automatizados
