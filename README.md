@@ -38,7 +38,7 @@ Com uma interface simples e amigável disponibiliza os serviços de Busca, Inser
 
 Uma versão em funcionamento da aplicação está disponível para demonstração e pode ser acessada através do endereço:
 
-[Desafio Luizalabs (Web)](http://desafio-luizalabs.herokuapp.com/)
+[Desafio Luizalabs (Web)](https://desafio-luizalabs.herokuapp.com/)
 
 <div id='id3' />
 
