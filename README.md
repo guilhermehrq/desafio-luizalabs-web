@@ -1,3 +1,4 @@
+
 # Desafio Técnico Luizalabs - Web
 
 ![Build status](https://travis-ci.com/guilhermehrq/desafio-luizalabs-web.svg?token=NMRqR1XzXHw8yVERNabp&branch=master)
@@ -8,8 +9,8 @@ Frontend desenvolvido para consumo dos serviços disponibilizados pela [API de D
 - Interface criada com [Semantic UI](https://react.semantic-ui.com/)
 - Testes automatizados com [Jest](https://jestjs.io/) e [Enzyme](https://airbnb.io/enzyme/)
 - Integração continua com [TravisCI](https://travis-ci.com/)
-- Deploy automático com [Heroku](https://www.heroku.com/)
-- Padronização do projeto seguindo especificações da [Airbnb](https://github.com/airbnb/javascript) configuradas com o uso do [ESLint](https://eslint.org/)
+- Deploy automático no [Heroku](https://www.heroku.com/)
+- Padronização de projeto seguindo especificações da [Airbnb](https://github.com/airbnb/javascript) configuradas com o uso do [ESLint](https://eslint.org/)
 
 ## Índice
 
@@ -24,9 +25,9 @@ Frontend desenvolvido para consumo dos serviços disponibilizados pela [API de D
 
 ## A aplicação
 
-Esta aplicação web foi desenvolvida como desafio técnico para a vaga de desenvolvedor do Luizalabs, com o objetivo de consumir os serviços disponibilizados pela API criada para o mesmo desafio.
+Esta aplicação web foi desenvolvida como parte do desafio técnico para a vaga de desenvolvedor no Luizalabs, com o objetivo de consumir os serviços disponibilizados pela API criada para o mesmo desafio.
 
-> Mais infomações sobre a API podem ser encontradas em seu [repositório](https://github.com/guilhermehrq/desafio-luizalabs).
+> Mais infomações sobre a API podem ser encontradas em [Desafio Técnico Luizalabs - API](https://github.com/guilhermehrq/desafio-luizalabs).
 
 A aplicação foi inteiramente desenvolvida com a biblioteca JavaScript **ReactJS** com elementos da framework de interface de usuário **Semantic UI**.
 
@@ -36,9 +37,11 @@ Com uma interface simples e amigável disponibiliza os serviços de Busca, Inser
 
 ## Demo
 
-Uma versão em funcionamento da aplicação está disponível para demonstração e pode ser acessada através do endereço:
+Uma versão em funcionamento da aplicação foi hospedada em uma instância do Heroku, e está disponível para demonstração e pode ser acessada através do endereço:
 
 [Desafio Luizalabs (Web)](https://desafio-luizalabs.herokuapp.com/)
+
+> O Heroku trabalha em regime de demanda em suas instâncias, por isso, o primeiro acesso ao endereço acima pode demorar alguns segundos.
 
 <div id='id3' />
 
@@ -65,7 +68,7 @@ REACT_APP_API_URL=http://localhost:3001
 // Também pode ser configurado com a rota: https://desafio-luizalabs-api.herokuapp.com
 ```
 
-> Certifique-se de ter iniciado a API, o guia para utilização pode ser encontrado aqui: [Desafio Luizalabs - API](https://github.com/guilhermehrq/desafio-luizalabs)
+> Certifique-se de ter iniciado a API, o guia para utilização pode ser encontrado aqui: [Desafio Técnico Luizalabs - API](https://github.com/guilhermehrq/desafio-luizalabs)
 
 <div id='id5' />
 
